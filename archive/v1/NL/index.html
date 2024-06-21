@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Home</title>
+        <!-- import vue.js -->
+        <script src="../js/vue.js"></script>
+        <!-- import jquery -->
+        <script src="../js/jquery-3.2.1.js"></script>
+        <!-- font import -->
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+        <!-- css -->
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/responsive.css">
+        <link rel="stylesheet" href="../css/animations.css">
+        <!-- javascript -->
+        <script type="text/javascript" src="../scripts/animations.js"></script>
+        <!-- responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    </head>
+
+    <body>
+         <div id="wrapper">
+        <div id="nav-menu">
+        <div id="nav-link-container">
+        <a id='nav-link' href="index.html">HOME</a>
+        </br>
+        <a id='nav-link'href="werk.html">WERK</a>
+        </br>
+        <a id='nav-link'href="informatica.html">INFORMATICA</a>
+        </br>
+        <a id='nav-link'href="about.html">WIE BEN IK?</a>
+        </br>
+        <a id='nav-link'href="contact.html">CONTACT<a>
+        </div>
+        </div>
+        <!-- nav-icon -->
+        <div id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div id="nav-circle"></div>
+        <!-- header -->
+    <header>
+
+    <div class="main-header-container">
+        
+        </div>
+    </header>
+    <!-- main section -->
+     <div id="content">
+        <div id="home-list">
+        <ul style="margin-top:0px; padding-left:0px; margin-bottom:0px;">  
+            <div v-for="Subject in Subjects" class="fill" style="height:100%; width:100%;">
+                <img v-bind:src="Subject.image" id="top-image" class="fill-img"/>
+                <div class="home-holder"> 
+                    <img class="home-holder-image" v-bind:src='Subject.text_image'> <!-- Omdat deze in fill staat gaat het mis -->
+                </div>
+            </div>
+            
+        </ul>
+        </div>
+
+</div>
+<div id="footer">
+    <div align="center" style="height:100px;">
+    <a href="https://www.linkedin.com/in/willem-van-der-pijl-3ab456104/" class="fa fa-linkedin" target="blank"></a>
+    <a href="https://www.instagram.com/willem_pijl/" class="fa fa-instagram" target="blank"></a>
+    <a href="https://www.youtube.com/channel/UC6r-AhGaOR-MQ7Ido6wMKGA" class="fa fa-youtube" target="blank"></a>
+    </div>
+</div>
+</div>
+
+
+
+
+        <script>
+            new Vue({
+                el: '#home-list',
+                data: {
+                   Subjects:[
+                        //Yes I am doing this client side. It's a portfolio, who cares about security.
+                        {image: '../img/galaxy.jpg', text_image:'../img/Home-1.png'},
+                        {image: '../img/nightcall.png', text_image:'../img/Home-1.png'},
+                        {image: '../img/white.jpg', text_image:'../img/Home-1.1.png'},
+                        {image: '../img/white.jpg', text_image:'../img/Home1.2.png'},
+                        {image: '../img/galaxy.jpg', text_image:'../img/Home-1.4.png'}
+                        
+                    ]
+                }
+            });
+
+        </script>
+
+
+    </body>
+    </html>

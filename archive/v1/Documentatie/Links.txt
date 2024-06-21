@@ -1,0 +1,7 @@
+https://www.youtube.com/watch?v=muZ0JYBCnrU - Flat responsive design
+https://www.youtube.com/watch?v=KMX1mFEmM3E - Angular vs React.js vs View
+https://www.youtube.com/watch?v=FGWD4cb7iIo - Vue tutorial
+https://www.youtube.com/watch?v=BIz02qY5BRA&t=249s - Responsive
+https://css-tricks.com/aos-css-driven-scroll-animation-library/ - aos animations
+https://www.youtube.com/watch?v=ysVv789vi3A -  scrolling animations
+https://onextrapixel.com/create-an-interactive-moving-backgroundobject-that-reacts-to-viewers-cursor/ - opposite move on hover

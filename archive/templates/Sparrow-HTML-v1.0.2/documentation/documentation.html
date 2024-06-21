@@ -1,0 +1,326 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Template Documentation "Sparrow - Responsive Travel Booking Site Template"</title>
+<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <div class="main">
+        
+        <h1>“Sparrow - Responsive Travel Booking Site Template” Documentation by “WPSTALL” v1.0</h1>
+        
+        <div class="line"></div><!-- line end -->
+        
+        <h2>“Sparrow - Responsive Travel Booking Site Template”</h2>
+        
+        <div class="line"></div><!-- line end -->
+        
+        	<div class="author">
+            	<p style="line-height:21px;">
+                	Created: August 01, 2015<br />
+                    By: WPSTALL<br />
+                </p>
+            </div><!-- author end -->
+            
+            <div class="description">
+            	<p style="line-height:21px;">
+                	Thank you for buying my theme. If you have any questions, please ask them via the contact form on <a target="_blank" href="http://themeforest.net/user/wpstall#contact"><strong>Profile</strong></a> page on ThemeForest. Thank you!
+                </p>
+            </div><br clear="all" /><!-- description end -->
+        
+        <div class="line"></div><!-- line end --><br />
+        
+        <h3>Table of Contents</h3><br />
+        
+        <p>
+			<font color="#023e54">A:</font>&nbsp;&nbsp;<a href="#features">Features</a><br />
+        	<font color="#023e54">B:</font>&nbsp;&nbsp;<a href="#html">HTML Structure</a><br />
+            <font color="#023e54">C:</font>&nbsp;&nbsp;<a href="#js">JavaScript</a><br />
+			<font color="#023e54">D:</font>&nbsp;&nbsp;<a href="#twitter">Twitter Widgets</a><br />
+            <font color="#023e54">E:</font>&nbsp;&nbsp;<a href="#psd">PSD Files</a><br />
+            <font color="#023e54">F:</font>&nbsp;&nbsp;<a href="#credits">Sources and Credits</a><br />
+            <!-- font color="#023e54">G:</font>&nbsp;&nbsp;<a href="#contact">Contact Form</a -->
+        </p><br />
+		
+		<div class="line"></div><!-- line end --><br />
+        
+        <h4 id="features">A) Features - <a href="#">top</a></h4><br />
+        
+        <p>
+			- Valid html code<br />
+			- Carefully hand-crafted<br />
+			- Responsive Design<br />
+			- HTML5, CSS3<br />
+			- 35+ HTML Files<br />
+			- 4 Types of Home Pages<br />
+			- 6 Complete Hotels Listing/Booking Pages<br />
+			- 6 Complete Flights Listing/Booking Pages<br />
+			- 6 Complete Tours Listing/Booking Pages<br />
+			- 2 Blog Listing Pages<br />
+			- 2 Portfolio Pages<br />
+			- Search Box for Hotels, Flights, Tours<br />
+			- Login/Register Pop-up section<br />
+			- About Page<br />
+			- Services page<br />
+			- Contact Page with Google Map<br />
+			- Cross Browser Compatible<br />
+			- Documentation<br />
+			- Free Updates & Supports<br />
+			- Excellent customer support<br />
+			- and more...
+        </p><br />
+        
+        <div class="line"></div><!-- line end --><br />
+        
+        <h4 id="html">B) HTML Structure - <a href="#">top</a></h4><br />
+        
+        <p>
+        	   <font color="#272727" style="margin:0 102px 0 0px;"><strong>1. Home</strong></font> (index.html, index_02.html, index_03.html, index_04.html)<br />
+			   <font color="#272727" style="margin:0 102px 0 0px;"><strong>2. Flights</strong></font> (flight_alternative.html, flight_alternative_table.html, flight_booking.html, flight_detail.html, flight_one_way.html, flight_round_trip.html)<br />
+			   <font color="#272727" style="margin:0 102px 0 0px;"><strong>3. Hotels</strong></font> (hotel_booking.html, hotel_detail.htmlm, hotel_detail_style.html, hotel_list.html, hotel_simple_style.html, booking_complete.html)<br /> 
+			   <font color="#272727" style="margin:0 102px 0 0px;"><strong>4. Tours</strong></font> (tour_alternative.html, tour_booking.html, tour_detail.html, tour_grid.html, tour_simple.html)<br /> 
+			   <font color="#272727" style="margin:0 42px 0 0px;"><strong>5. Portfolio Pages</strong></font>  (portfolio_three_collumns.html, portfolio_four_collumns.html, cover_galleries.html, item_page.html, item_page_full_width.html)<br />
+			   <font color="#272727" style="margin:0 68px 0 0px;"><strong>6. Shortcodes</strong></font>  (shortcodes.html, columns.html, interactive_elements.html, services.html, typography.html)<br />
+               <font color="#272727" style="margin:0 110px 0 0px;"><strong>7. Blog</strong></font> (blog_masonry.html, blog_with_sidebar.html, standart_blog_post.html)<br />
+               <font color="#272727" style="margin:0 83px 0 0px;"><strong>8. About Us</strong></font> (about_us.html, about_2.html)<br />
+               <font color="#272727" style="margin:0 72px 0 0px;"><strong>9. Contact Us</strong></font>  (contacts.html)<br />
+        </p><br />
+        
+        <h5>Main menu</h5><br />
+        <p>
+        	   The Main menu is build from floated list elements and easily extendable. It invlude the top part (class="header-a") and the main menu (class="header-b")<br /><br />
+               
+               <b>Editing the Main menu</b><br />
+			    The main menu is created by using the items for mobile menu and for desktop menu. It's easy in case, when you want to display another menu on mobile devices.<br /><br />
+				
+				1. Mobile menu class:
+<pre>
+&lt;div class="mobile-menu"&gt;
+	&lt;nav&gt;
+		&lt;ul&gt;
+			&lt;li&gt;&lt;a class="has-child" href="#"&gt;HOME&lt;/a&gt;
+				&lt;ul&gt;
+					&lt;li&gt;&lt;a href="index.html"&gt;Home style one&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="index_02.html"&gt;Home style two&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="index_03.html"&gt;Home style three&lt;/a&gt;&lt;/li&gt;
+					&lt;li&gt;&lt;a href="index_04.html"&gt;Home style four&lt;/a&gt;&lt;/li&gt;	
+				&lt;/ul&gt;						
+			&lt;/li&gt;
+			&lt;li&gt;&lt;a href="#"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/nav&gt;
+&lt;/div&gt;
+</pre>
+			   
+2. Desktop menu class:
+
+<pre>
+&lt;nav class="header-nav"&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href="index.html"&gt;Home style one&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="index_02.html"&gt;Home style two&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="index_03.html"&gt;Home style three&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="index_04.html"&gt;Home style four&lt;/a&gt;&lt;/li&gt;	
+			&lt;/ul&gt;
+		&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Hotels&lt;/a&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href="hotel_list.html"&gt;Hotels standard list&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="hotel_simple_style.html"&gt;Hotels simple style&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="hotel_detail_style.html"&gt;Hotels detail style&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="hotel_detail.html"&gt;Hotel item page&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="hotel_booking.html"&gt;Hotel booking page&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="booking_complete.html"&gt;booking complete page&lt;/a&gt;&lt;/li&gt;
+			&lt;/ul&gt;
+		&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+</pre>
+			   
+			   
+				You can easily edit the Main menu item by replacing or editing the text between the &lt;a&gt; element. Editing the navigation will extend the bar to the left, because they is positioned to the right. To set the navigation point related to the page on the status active u must add the class active to the related &lt;li&gt; element.<br /><br />
+                
+				Main menu has dropdown submenu. You can easily add it to any Main menu element just adding submenu ul-li stucture.<br /><br />
+				
+<pre>
+&lt;nav&gt;
+	&lt;ul&gt;
+		&lt;li&gt;&lt;a class="has-child" href="#"&gt;HOME&lt;/a&gt;
+			&lt;ul&gt;
+				&lt;li&gt;&lt;a href="index.html"&gt;Home style one&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="index_02.html"&gt;Home style two&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="index_03.html"&gt;Home style three&lt;/a&gt;&lt;/li&gt;
+				&lt;li&gt;&lt;a href="index_04.html"&gt;Home style four&lt;/a&gt;&lt;/li&gt;	
+			&lt;/ul&gt;						
+		&lt;/li&gt;
+		&lt;li&gt;&lt;a href="#"&gt;Contact Us&lt;/a&gt;&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/nav&gt;
+</pre>
+                
+                <b>Setting links</b><br />
+				The navigation between different pages is simple. To set a link to the page edit the 
+<pre>&lt;a href="<b>page_name.html</b>"&gt;<b>Example</b>&lt;/a&gt;</pre>
+
+        </p><br />
+        
+        <h5>Header</h5><br />
+        <p>
+        	   The header is a block with top menu (with some useful blocks like phone number, social links, drop-down for currencies and languages), logo and main menu.
+        </p><br />
+		
+		<h5>Setup Logo</h5></p>
+<pre>&lt;div class="header-logo"&gt;&lt;a href="index.html"&gt;&lt;img src="img/logo.png"&gt;&lt;/a&gt;&lt;/div&gt;</pre>
+        
+        <h5>Content</h5><br />
+        <p>
+        	   The Content section contains the whole content with pictures, text and plugins. The height of the Content depends on the height of the content inside. For customization see detail on each pages.
+        </p><br />
+        
+        <h5>Footer</h5><br />
+        <p>
+        	   The footer is a block with a copyright, social links and some useful blocks (e.g. GET IN TOUCH, FEATURED DEALS, TWITTER WIDGET, NEWSLETTER SIGN UP).
+        </p><br /><br />
+        
+        <h5>Slider (used on all home pages index.html, index_02.html, index_03.html, index_04.html)</h5>
+<pre>
+&lt;div class="mp-slider"&gt;
+	&lt;!-- // slider // --&gt;
+	&lt;div class="mp-slider-row"&gt;
+		&lt;div class="swiper-container"&gt;
+			&lt;div class="swiper-preloader-bg"&gt;&lt;/div&gt;
+			&lt;div id="preloader"&gt;
+				&lt;div id="spinner"&gt;&lt;/div&gt;
+			&lt;/div&gt;
+			
+			&lt;a href="#" class="arrow-left"&gt;&lt;/a&gt;
+			&lt;a href="#" class="arrow-right"&gt;&lt;/a&gt;
+			&lt;div class="swiper-pagination"&gt;&lt;/div&gt;
+			&lt;div class="swiper-wrapper"&gt;  				
+				&lt;div class="swiper-slide"&gt; 
+					&lt;section style="background:url(img/sider-01.jpg) center top no-repeat;"&gt;
+						&lt;div class="mp-slider-lbl"&gt;Great journey begins with a small step&lt;/div&gt;
+						&lt;div class="mp-slider-lbl-a"&gt;Make Your Life Better and Bright!  You must trip with Us!&lt;/div&gt;
+						&lt;div class="mp-slider-btn"&gt;&lt;a href="#" class="btn-a"&gt;Learn more&lt;/a&gt;&lt;/div&gt;
+					&lt;/section&gt;      
+				&lt;/div&gt;
+				&lt;div class="swiper-slide"&gt; 
+					&lt;section class="slide-b" style="background:url(img/sider-02.jpg) center top no-repeat;"&gt;
+						&lt;div class="mp-slider-lbl"&gt;Relax with us. we love our clients&lt;/div&gt;
+						&lt;div class="mp-slider-lbl-a"&gt;Make Your Life Better and Bright!  You must trip with Us!&lt;/div&gt;
+						&lt;div class="mp-slider-btn"&gt;&lt;a href="#" class="btn-a"&gt;Learn more&lt;/a&gt;&lt;/div&gt;
+					&lt;/section&gt;      
+				&lt;/div&gt;
+				&lt;div class="swiper-slide"&gt; 
+					&lt;section class="slide-b" style="background:url(img/sider-03.jpg) center top no-repeat;"&gt;
+						&lt;div class="mp-slider-lbl"&gt;the best relax with us&lt;/div&gt;
+						&lt;div class="mp-slider-lbl-a"&gt;Make Your Life Better and Bright!  You must trip with Us!&lt;/div&gt;
+						&lt;div class="mp-slider-btn"&gt;&lt;a href="#" class="btn-a"&gt;Learn more&lt;/a&gt;&lt;/div&gt;
+					&lt;/section&gt;      
+				&lt;/div&gt;            
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;/div&gt;
+	&lt;!-- \\ slider \\ --&gt;
+&lt;/div&gt;
+</pre>
+        
+        <div class="line"></div><!-- line end --><br />
+        
+        <h4 id="js">C) JavaScript - <a href="#">top</a></h4><br />
+        
+        <p>
+            The theme makes use of various JavaScripts and the jQuery framework to add dynamic functionality. Some of the scripts used include:<br /><br />
+            
+            1. <a href="http://bxslider.com" target="_blank">BxSlider</a><br />
+            2 .<a href="http://www.no-margin-for-errors.com" target="_blank">prettyPhoto</a><br />
+            3. <a href="http://adam.co/lab/jquery/customselect/" target="_blank">jquery.customSelect()</a><br />
+            4. <a href="http://isotope.metafizzy.co" target="_blank">Isotope - Filter & sort magical layouts</a><br />
+            5. <a href="https://github.com/morr/jquery.appear/" target="_blank">jQuery appear plugin</a><br />
+            6. <a href="http://bxslider.com" target="_blank">BxSlider</a><br />
+			7 .<a href="http://dimox.name/jquery-form-styler/" target="_blank">jQuery Form Styler</a><br />
+			8 .<a href="http://jqueryui.com" target="_blank">jQuery UI</a><br />			
+			9 .<a href="http://www.tinywall.net/" target="_blank">jQuery scroroller Plugin</a><br />
+			10 .<a href="http://www.appelsiini.net/projects/viewport" target="_blank">Viewport - jQuery selectors for finding elements in viewport</a><br /><br />
+            
+            If you would like to edit the javascript/jQuery code all js files are in "<b>/js/</b>" folder.
+
+        </p><br />
+        
+        <div class="line"></div><!-- line end --><br />
+		
+		<h4 id="twitter">D) Twitter Widgets - <a href="#">top</a></h4><br />
+		
+		<p>The twitter details are in in the file "get-tweets1.1.php", change twitter username, tweets count, consumer key, consumer secret, access token and access token secret. Below is an example, change the settings with yours:<br /></p>
+
+<pre>
+$twitteruser = "wpstall";
+$notweets = '2';
+$consumerkey = 'l3mHsfMKxZNOmfuU5VhQtA';
+$consumersecret = 'owrII6Imsw4B1YzOKsmxleV9HMI2qfjSaSANkFyY2T8';
+$accesstoken = '234541855-BKM0TaVI6Ns4uX3CgLdtY75C5n6FANSmltyPSQZN';
+$accesstokensecret = 'NLBZLInbNbUD7VOIpBlLs3KGdZ2Sk7KOspG1uw6YBs';
+</pre>
+		
+		<p>Place the below code anywhere in the page, recomended in sidebar or in footer:</p>
+<pre>
+&lt;div class="twitter-wiget"&gt;
+	&lt;div id="twitter-feed"&gt;&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+		
+		<div class="line"></div><!-- line end --><br />
+				
+				
+        
+        <h4 id="psd">E) PSD Files - <a href="#">top</a></h4><br />
+        
+        <p>
+            I've included all PSDs with this template. In this PSDs you will find everything you need.<br />
+
+        </p><br />
+        
+        <div class="line"></div><!-- line end --><br />
+        
+        <h4 id="credits">F) Sources and Credits - <a href="#">top</a></h4><br />
+        
+        <p>
+        	<font color="#272727">Google Fonts:</font><br />
+            
+			<a href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">Montserrat</a> <br />
+			<a href="http://fonts.googleapis.com/css?family=Lora:400,400italic" rel="stylesheet" type="text/css">Lora</a> <br />
+			<a href="http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,600,700,800" rel="stylesheet" type="text/css">Raleway:100,200,300,400,600,700,800</a> <br />
+			<a href="http://fonts.googleapis.com/css?family=Raleway:400,600" rel="stylesheet" type="text/css">Raleway:400,600</a> <br />
+			<a href="http://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">PT+Sans:400,700</a> <br />
+			<a href="http://fonts.googleapis.com/css?family=Lato:400,700&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css">Lato:400,700</a> <br />
+			<a href="http://fonts.googleapis.com/css?family=Open+Sans:400,600,700&amp;subset=latin,cyrillic" rel="stylesheet" type="text/css">Open+Sans:400,600,700</a> <br />
+
+        </p><br />
+        
+        <div class="line"></div><!-- line end --><br />
+        <!--
+        <h4 id="contact">G) Contact Form - <a href="#">top</a></h4><br />
+        
+        <p>
+            It's very easy to set ajax contact on <b>contact.html</b> and <b>contact_2.html</b><br />
+			just find line in <b>php/contact_form.php</b> <b>$emailTo = "info@skydream.com";</b> and change to your email. Example :<b> $emailTo = "youremail@mail.com";</b>.
+        </p><br />
+        
+        <div class="line"></div><br />
+		-->
+        
+        <p>
+        	Once again, thank you so much for purchasing this template. As I said at the beginning, I'd be glad to help you if you have any questions relating to this template. If you have a more general question relating to the themes on ThemeForest, you might consider visiting the forums and asking your question in the "Item Discussion" section.
+        </p><br />
+        
+        <h3>wpstall</h3><br />
+        
+    </div><!-- main end -->
+
+</body>
+</html>

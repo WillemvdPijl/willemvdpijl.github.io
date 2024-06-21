@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Over mij | Willem van der Pijl</title>
+		<meta charset="utf-8" />
+		<meta name="theme-color" content="#291a43" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!-- import vue -->
+		<script src="../js/vue.js"></script>
+        <!-- import jquery -->
+		<script src="../js/jquery-3.2.1.js"></script>
+		<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+	</head>
+
+		<!-- Global Site Tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		
+		  gtag('config', 'UA-123409145-1');
+		</script>
+
+	<body>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+<!-- Header -->
+<header id="header">
+	<h1><a href="index.html">Willem</a></h1>
+	<nav id="nav">
+		<ul>
+			<li class="special">
+				<a href="#menu" class="menuToggle"><span>Menu</span></a>
+				<div id="menu">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="development.html">Development</a></li>
+						<li><a href="video.html">Video Editing</a></li>
+						<li><a href="grafisch.html">Grafisch</a></li>
+						
+						<li><a href="informatica.html">Informatica</a></li>
+						<br/>
+						<li><a href="willem.html">Over mij</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<br/>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h2>Wie ben ik?</h2>
+							<p>Sport, muziek en tech</p>
+						</header>
+						<section class="wrapper style5">
+							<div class="inner">
+
+								<h3>Curriculum Vitae:</h3>
+								<p>Klik <a href="https://willemvdpijl.stackstorage.com/s/X498XXoJdEfXS13" target="_blank">hier</a> om mijn cv te downloaden</p>
+							</div>
+						</section>
+					</article>
+
+								<!-- Footer -->
+								<footer id="footer">
+										<ul class="copyright">
+									</ul>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/willem-van-der-pijl-3ab456104/" class="icon fa-linkedin" target="_blank"><span class="label">Linkedin</span></a></li>
+										<li><a href="https://github.com/WillemvdPijl" class="icon fa-github" target="_blank"><span class="label" >Github</span></a></li>
+										<li><a href="https://www.youtube.com/channel/UC6r-AhGaOR-MQ7Ido6wMKGA" class="icon fa-youtube" target="_blank"><span class="label">Youtube</span></a></li>
+										<li><a href="https://www.instagram.com/willem_pijl/" class="icon fa-instagram" target="_blank"><span class="label">Instagram</span></a></li>
+										<li><a href="https://twitter.com/Willem_Pijl" class="icon fa-twitter" target="_blank"><span class="label">Twitter</span></a></li>
+									</ul>
+									<ul class="copyright">
+										<li>&copy; Willem van der Pijl</li><li>Powered by: <a href="http://html5up.net" target="_blank">HTML5 UP</a> and <a href="https://vuejs.org" target="_blank">vue.js</a></li>
+									</ul>
+								</footer>
+								
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
+
+			        
+			<script>
+				new Vue({
+					el: '#app',
+					data: {
+						Hobbys:[
+							//Yes I am doing this client side. It's a portfolio, who cares about security.
+							{name: "Tekenen", description: "Van papier naar digitaal, tekenen ben ik altijd blijven doen",  image: 'https://images-na.ssl-images-amazon.com/images/I/71ufng%2Bgy-L._SL1500_.jpg'},
+							{name: "Muziek", description: "Muziek zit in de familie", image: 'http://www.bestedigitalepiano.nl/wp-content/uploads/2016/11/akoestische-piano-1.jpg',},
+							{name: "Sport", description: "Als een vis in het water", image: 'https://s3-ap-southeast-1.amazonaws.com/blog-ph/wp-content/uploads/2016/07/14073512/boy-swimming.jpg',},
+							{name: "Gamen", description: "Versla me in Mario Kart",  image: 'https://ic.tweakimg.net/ext/i/2001421933.jpeg'},
+							{name: "Video Editing", description: "Al op de basisschool was ik hier al mee bezig", image: 'https://s3.amazonaws.com/pbblogassets/uploads/2015/10/Professional-Video-Editing-Tips-and-Tricks.jpg',},
+							{name: "Grafisch vormgeven", description: "Wat begon met het photoshoppen van een vriend zijn vakantiefoto's veranderde in hopelijk later mijn werk", image:"http://www.digifotostarter.nl/sites/default/files/photoshop.jpg"}
+							
+						]
+					}
+				});
+	
+			</script>
+
+	</body>
+</html>

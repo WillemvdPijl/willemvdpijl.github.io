@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Portfolio</title>
+        <!-- import vue.js -->
+        <script src="../js/vue.js"></script>
+        <!-- import jquery -->
+        <script src="../js/jquery-3.2.1.js"></script>
+        <!-- font import -->
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+        <!-- css -->
+        <link rel="stylesheet" href="../css/main.css">
+        <link rel="stylesheet" href="../css/responsive.css">
+        <link rel="stylesheet" href="../css/animations.css">
+        <!-- javascript -->
+        <script type="text/javascript" src="../scripts/animations.js"></script>
+        <!-- responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    </head>
+   
+
+      
+    <body>
+         
+        <div id="nav-menu">
+            <div id="nav-link-container">
+        <a id='nav-link' href="index.html">HOME</a>
+        </br>
+        <a id='nav-link'href="werk.html">WERK</a>
+        </br>
+        <a id='nav-link'href="informatica.html">INFORMATICA</a>
+        </br>
+        <a id='nav-link'href="about.html">WIE BEN IK?</a>
+        </br>
+        <a id='nav-link'href="contact.html">CONTACT<a>
+        </div>
+        </div>
+        <!-- header -->
+        <!--<div class="circle">-->
+        <div id="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <!--</div>-->
+    <header>
+    <div class="sub-header-container">
+        
+        </div>
+    </header>
+
+<div id="app">
+    <h1>Wie ben ik?</h1>
+    
+    <ul>
+        
+        <div v-for="Hobby in Hobbys" class="one-third" style="height: 400px;">
+            <div class="fill-one-third" style="height:250px;">
+            <img v-bind:src="Hobby.image"/>
+            </div>
+            <h2>{{Hobby.name}}</h2>
+            <h3> {{Hobby.description}} </h3>
+        </div>
+        
+        </ul>
+        </div>
+        </div>
+    
+
+    
+    
+        
+        <script>
+            new Vue({
+                el: '#app',
+                data: {
+                    Hobbys:[
+                        //Yes I am doing this client side. It's a portfolio, who cares about security.
+                        {name: "Tekenen", description: "Van papier naar digitaal, tekenen ben ik altijd blijven doen",  image: 'https://images-na.ssl-images-amazon.com/images/I/71ufng%2Bgy-L._SL1500_.jpg'},
+                        {name: "Muziek", description: "Muziek zit in de familie", image: 'http://www.bestedigitalepiano.nl/wp-content/uploads/2016/11/akoestische-piano-1.jpg',},
+                        {name: "Sport", description: "Als een vis in het water", image: 'https://s3-ap-southeast-1.amazonaws.com/blog-ph/wp-content/uploads/2016/07/14073512/boy-swimming.jpg',},
+                        {name: "Gamen", description: "Versla me in Mario Kart",  image: 'https://ic.tweakimg.net/ext/i/2001421933.jpeg'},
+                        {name: "Video Editing", description: "Al op de basisschool was ik hier al mee bezig", image: 'https://s3.amazonaws.com/pbblogassets/uploads/2015/10/Professional-Video-Editing-Tips-and-Tricks.jpg',},
+                        {name: "Grafisch vormgeven", description: "Wat begon met het photoshoppen van een vriend zijn vakantiefoto's veranderde in hopelijk later mijn werk", image:"http://www.digifotostarter.nl/sites/default/files/photoshop.jpg"}
+                        
+                    ]
+                }
+            });
+
+        </script>
+        
+        <!--<div class='footer'>
+            </div>-->
+    </body>
+</html>

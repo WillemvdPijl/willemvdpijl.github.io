@@ -1,0 +1,6 @@
+https://tympanus.net/codrops/2013/11/07/css-overlay-techniques/
+https://www.w3schools.com/w3css/w3css_modal.asp
+https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_modal
+https://www.youtube.com/watch?v=B0_M1y4aFAQ
+https://www.youtube.com/watch?v=k4taTzkhzHc
+https://github.com/iamshaunjp/css-animations-playlist/blob/master/web-examples/style.css

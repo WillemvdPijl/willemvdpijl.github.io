@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Ik Willem</title>
+        <!-- import vue.js -->
+        <script src="js/vue.js"></script>
+        <!-- import jquery -->
+        <script src="js/jquery-3.2.1.js"></script>
+        <!-- font import -->
+        <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+        <!-- css -->
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="stylesheet" href="css/animations.css">
+        <!-- javascript -->
+        <script type="text/javascript" src="scripts/animations.js"></script>
+        <!-- responsiveness -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+        <!-- Add icon library -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+    </head>
+
+    		<!-- Global Site Tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123409145-1');
+</script>
+
+    <!-- main section -->
+        <div id="home-list">
+        <ul style="margin-top:0px; padding-left:0px; margin-bottom:0px;">  
+            <div v-for="Subject in Subjects" class="fill" style="height:100%; width:100%;">
+                <img v-bind:src="Subject.image" id="top-image" class="fill-img"/>
+                <div class="home-holder" > 
+                    <img class="home-holder-image" v-bind:src='Subject.text_image'>
+                    </div>
+                    <div class="home-holder" style="margin-top:150px; height: 60px;">
+                        <div style="display:block; margin-left:auto; margin-right:auto; max-height: 100%; max-width: 100%;">
+                        <a href="https://www.linkedin.com/in/willem-van-der-pijl-3ab456104/" class="fa fa-linkedin" target="blank"></a>
+                        <a href="https://www.instagram.com/willem_pijl/" class="fa fa-instagram" target="blank" style="margin-left:25px;"></a>
+                        <a href="https://www.youtube.com/channel/UC6r-AhGaOR-MQ7Ido6wMKGA" class="fa fa-youtube" target="blank"style="margin-left:25px;"></a>
+                </div>
+                </div>
+            </div>
+            
+        </ul>
+        </div>
+
+
+        <script>
+            new Vue({
+                el: '#home-list',
+                data: {
+                   Subjects:[
+                        {image: 'img/galaxy.jpg', text_image:'img/comingsoon.PNG'}
+                    ]
+                }
+            });
+
+        </script>
+
+
+    </body>
+    </html>
