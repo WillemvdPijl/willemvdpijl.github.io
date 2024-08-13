@@ -2687,7 +2687,7 @@ input, select, textarea {
 	}
 	@media screen and (orientation: portrait) {
 		.videobanner{
-			max-height: 55vh;
+			width: 100%;
 		}
 	}
 
