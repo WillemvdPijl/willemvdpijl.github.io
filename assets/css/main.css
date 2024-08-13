@@ -2683,6 +2683,7 @@ input, select, textarea {
 	.video-banner{
 		height: 100%;
 		text-align: center;
+		vertical-align: top;
 	}
 
 /* List */
