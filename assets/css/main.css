@@ -2683,8 +2683,12 @@ input, select, textarea {
 	.videobanner{
 		text-align: center;
 		vertical-align: top;
-		width: auto;
-		height: 65vh;
+		object-fit: fill;
+	}
+	@media screen and (orientation: portrait) {
+		.videobanner{
+			max-height: 55vh;
+		}
 	}
 
 	.overflow-hidden {
