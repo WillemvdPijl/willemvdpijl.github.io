@@ -3576,7 +3576,7 @@ input, select, textarea {
 		}
 
 		.banner.style1.fullscreen {
-			min-height: 70vh;
+			min-height: 100vh;
 		}
 
 			@media screen and (orientation: portrait) {
