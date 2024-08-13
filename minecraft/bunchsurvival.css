@@ -92,3 +92,31 @@ input:checked+.slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
+
+.home-button-wrapper {
+    text-align: center;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+    top: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    pointer-events: none;
+}
+
+.home-button {
+    border-radius: 55px;
+    background: rgba(60,90,128, 0.8);
+    color: white !important;
+    padding-left: 16px;
+    padding-right: 16px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border: 3px solid rgb(255,255,255,.4); /* Fallback for older browsers without RGBA-support */
+    border: 3px solid rgba(255,255,255,.4);
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+    pointer-events: all;
+}
