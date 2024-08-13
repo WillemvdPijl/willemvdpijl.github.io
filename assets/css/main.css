@@ -2680,6 +2680,11 @@ input, select, textarea {
 				width: 100%;
 			}
 
+	.video-banner{
+		height: 100%;
+		text-align: center;
+	}
+
 /* List */
 
 	ol {
