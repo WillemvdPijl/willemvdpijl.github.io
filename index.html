@@ -11,6 +11,18 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.5/lottie.min.js'>
+			// Replace "path/to/animation.json" with the actual path to your downloaded JSON animation file
+			const animationData = {
+				container: document.getElementById('animationContainer'),
+				renderer: 'svg',
+				loop: true,
+				autoplay: true,
+				path: './assets/lottieanimations/vogel.json' 
+			};
+		
+			const anim = Lottie.loadAnimation(animationData);
+		</script>
 	</head>
 	<body class="is-preload">
 
@@ -94,7 +106,7 @@
 							<p>Voor web, video en apps. Animatie en motion design is iets wat ik graag doe!</p>
 						</div>
 						<div class="animations-container">
-							
+							<div id="animationContainer"></div>
 						</div>
 					
 						<!-- Gallery -->
