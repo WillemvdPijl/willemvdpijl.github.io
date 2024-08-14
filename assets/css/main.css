@@ -2683,7 +2683,10 @@ input, select, textarea {
 	.videobanner{
 		text-align: center;
 		vertical-align: top;
-		object-fit: fill;
+		object-fit: cover;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 	@media screen and (orientation: portrait) {
 		.videobanner{
