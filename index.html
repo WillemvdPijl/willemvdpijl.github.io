@@ -16,7 +16,9 @@
 	</noscript>
 </head>
 
+
 <body class="is-preload">
+	<script src="assets/js/bodymovin.js"></script>
 
 	<!-- Wrapper -->
 	<div id="wrapper" class="divided">
@@ -26,14 +28,6 @@
 			class="banner style1 orient-left content-align-left image-position-center fullscreen onload-image-fade-in onload-content-fade-right">
 			<div class="content">
 				<h1>Willem van der Pijl | CineWillem</h1>
-				<!--
-							<ul class="icons">
-								<li><a href="https://www.youtube.com/@WillemvanderPijl" target="_blank" class="icon brands style2 fa-youtube"><span class="label">Youtube</span></a></li>
-								<li><a href="https://www.instagram.com/cinewillem/" target="_blank" class="icon brands style2 fa-instagram"><span class="label">Instagram</span></a></li>
-								<li><a href="https://www.facebook.com/CineWillem" target="_blank" class="icon brands style2 fa-facebook-f"><span class="label">Facebook</span></a></li>
-								<li><a href="https://www.linkedin.com/in/willemvdpijl/" target="_blank" class="icon brands style2 fa-linkedin-in"><span class="label">LinkedIn</span></a></li>
-							</ul>
-						-->
 				<p class="major">Het maken van videos, fotos & animaties vind ik geweldig. Neem een kijkje wat ik te
 					bieden heb!</p>
 				<ul class="actions stacked">
@@ -102,7 +96,9 @@
 				<p>Voor web, video en apps. Animatie en motion design is iets wat ik graag doe!</p>
 			</div>
 			<div class="animations-container">
-				<div id="animationContainer"></div>
+				<div id="vogel"></div>
+				<script src="assets/lottieanimations/vogel.js"></script>
+				<!--<div id="animationContainer"></div>-->
 			</div>
 
 			<!-- Gallery -->
@@ -385,7 +381,8 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js'></script>-->
-	<script src="assets/js/bodymovin.js"></script>
+	<!-- Use "Get player" in AE Bodymovin plugin to update -->
+	<!--<script src="assets/js/lottie.js"></script>
 	<script>
 		// Replace "path/to/animation.json" with the actual path to your downloaded JSON animation file
 		const animationData = {
@@ -393,10 +390,10 @@
 			renderer: 'svg',
 			loop: true,
 			autoplay: true,
-			path: "assets/lottieanimations/vogel.json"
+			path: "assets/lottieanimations/vogel.js"
 		};
-		const anim = Lottie.loadAnimation(animationData);
-	</script>
+		const anim = bodymovin.loadAnimation(animationData);
+	</script>-->
 
 </body>
 
