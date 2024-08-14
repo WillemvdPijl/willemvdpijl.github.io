@@ -2687,8 +2687,10 @@ input, select, textarea {
 		text-align: center;
 		vertical-align: top;
 		object-fit: cover;
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
 		height: 100%;
-		width: auto;
 	}
 	@media screen and (orientation: portrait) {
 		.videobanner{
@@ -2705,6 +2707,17 @@ input, select, textarea {
 		text-align: center;
 	}
 
+	.animations-container {
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		flex-direction: row;
+	}
+
+	.home-animatie {
+		height: 25vh;
+	}
 /* List */
 
 	ol {
