@@ -2709,10 +2709,15 @@ input, select, textarea {
 
 	.animations-container {
 		width: 100%;
-		height: 40vh;
-		background-color: red;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		flex-direction: row;
 	}
 
+	.home-animatie {
+		height: 25vh;
+	}
 /* List */
 
 	ol {
