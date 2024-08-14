@@ -2681,6 +2681,9 @@ input, select, textarea {
 			}
 
 	.videobanner{
+		position: relative;
+		left: 50%;
+		transform: translateX(-50%);
 		text-align: center;
 		vertical-align: top;
 		object-fit: cover;
