@@ -2718,6 +2718,13 @@ input, select, textarea {
 	.home-animatie {
 		height: 25vh;
 	}
+
+	@media screen and (orientation: portrait) {
+		.videobanner{
+			width: 50%;
+			height: auto;
+		}
+	}
 /* List */
 
 	ol {
