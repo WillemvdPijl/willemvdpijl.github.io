@@ -2690,6 +2690,7 @@ input, select, textarea {
 		position: relative;
 		left: 50%;
 		transform: translateX(-50%);
+		height: 100%;
 	}
 	@media screen and (orientation: portrait) {
 		.videobanner{
