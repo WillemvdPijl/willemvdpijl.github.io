@@ -2720,7 +2720,7 @@ input, select, textarea {
 	}
 
 	@media screen and (orientation: portrait) {
-		.videobanner{
+		.home-animatie{
 			width: 50%;
 			height: auto;
 		}
