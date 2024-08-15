@@ -20,6 +20,13 @@
 <body class="is-preload">
 	<script src="assets/js/bodymovin.js"></script>
 
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+	<script type="text/javascript">
+		emailjs.init('G42N5lVIYVBPpL0uZ')
+	</script>
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
 	<!-- Wrapper -->
 	<div id="wrapper" class="divided">
 
@@ -329,32 +336,32 @@
 					</section>
 
 				<!-- Seven -->
-					<section class="wrapper style1 align-left">
-						<div class="inner medium">
-							<h2>Leuke opdracht?</h2>
-							<p>Laat het me weten. Ik ben ook bereikbaar via @cinewillem op instagram</p>
-							<form method="post" action="#">
-								<div class="fields">
-									<div class="field half">
-										<label for="name">Naam</label>
-										<input type="text" name="name" id="name" value="" />
-									</div>
-									<div class="field half">
-										<label for="email">Email</label>
-										<input type="email" name="email" id="email" value="" />
-									</div>
-									<div class="field">
-										<label for="message">Bericht</label>
-										<textarea name="message" id="message" rows="6"></textarea>
-									</div>
-								</div>
-								<ul class="actions special">
-									<li><input type="submit" name="submit" id="submit" value="Send Message" /></li>
-								</ul>
-							</form>
-
+			<section class="wrapper style1 align-left">
+				<div class="inner medium">
+					<h2>Leuke opdracht?</h2>
+					<p>Laat het me weten. Ik ben ook bereikbaar via @cinewillem op instagram</p>
+					<form id="form">
+						<div class="fields">
+							<div class="field half">
+								<label for="name">Naam</label>
+								<input type="text" name="from_name" id="from_name" value="" />
+							</div>
+							<div class="field half">
+								<label for="email">Email</label>
+								<input type="text" name="reply_to" id="reply_to" value="" />
+							</div>
+							<div class="field">
+								<label for="message">Bericht</label>
+								<textarea type="text" name="message" id="message" rows="6"></textarea>
+							</div>
 						</div>
-					</section>
+						<ul class="actions special">
+							<li><input type="submit" id="button" value="Send Email" /></li>
+						</ul>
+					</form>
+
+				</div>
+			</section>
 
 			<!-- Footer -->
 			<footer class="wrapper style1 align-center">
@@ -385,6 +392,28 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
+	<script>    const btn = document.getElementById('button');
+
+		document.getElementById('form')
+			.addEventListener('submit', function (event) {
+				event.preventDefault();
+
+				btn.value = 'Sending...';
+
+				const serviceID = 'default_service';
+				const templateID = 'template_4s5axs9';
+
+				emailjs.sendForm(serviceID, templateID, this, 'G42N5lVIYVBPpL0uZ')
+					.then(() => {
+						btn.value = 'Send Email';
+						alert('Sent!');
+					}, (err) => {
+						btn.value = 'Send Email';
+						alert(JSON.stringify(err));
+					});
+			});
+
+	</script>
 	<!--<script src='https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js'></script>-->
 	<!-- Use "Get player" in AE Bodymovin plugin to update -->
 	<!--<script src="assets/js/lottie.js"></script>
@@ -399,6 +428,9 @@
 		};
 		const anim = bodymovin.loadAnimation(animationData);
 	</script>-->
+
+
+
 
 </body>
 
