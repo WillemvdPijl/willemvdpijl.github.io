@@ -2698,6 +2698,10 @@ input, select, textarea {
 		}
 	}
 
+	#changingimage {
+		transition: opacity 1s; /* Transition effect for opacity property */
+	}
+
 	.overflow-hidden {
 		overflow: hidden !important;
 	}
