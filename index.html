@@ -16,6 +16,15 @@
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
 </head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-901JVR8FPX"></script>
+<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+
+	gtag('config', 'G-901JVR8FPX');
+</script>
 
 
 <body class="is-preload">
@@ -207,27 +216,27 @@
 		}
 	</script>
 
-<script>
-window.addEventListener('DOMContentLoaded', (event) => {
-    var image = document.getElementById("changingimage");
-    var images = ["images/spotlight02.jpg", "images/spotlight03.jpg", "images/spotlight04.jpg", "images/spotlight05.jpg", "images/spotlight01.jpg"];
-    var index = 0;
+	<script>
+		window.addEventListener('DOMContentLoaded', (event) => {
+			var image = document.getElementById("changingimage");
+			var images = ["images/spotlight02.jpg", "images/spotlight03.jpg", "images/spotlight04.jpg", "images/spotlight05.jpg", "images/spotlight01.jpg"];
+			var index = 0;
 
-    function updateImage() {
-        image.style.opacity = 0; // Set opacity to 0 for fading effect
+			function updateImage() {
+				image.style.opacity = 0; // Set opacity to 0 for fading effect
 
-        // Wait for the fade animation to complete before updating the image source
-        setTimeout(() => {
-            image.src = images[index];
-            index = (index + 1) % images.length;
-            image.style.opacity = 1; // Set opacity back to 1 for the next image
-        }, 500);
+				// Wait for the fade animation to complete before updating the image source
+				setTimeout(() => {
+					image.src = images[index];
+					index = (index + 1) % images.length;
+					image.style.opacity = 1; // Set opacity back to 1 for the next image
+				}, 500);
 
-    }
+			}
 
-    setInterval(updateImage, 5000);
-});
-</script>
+			setInterval(updateImage, 5000);
+		});
+	</script>
 
 
 
