@@ -199,7 +199,7 @@ input, select, textarea {
 }
 	h1, h2, h3, h4, h5, h6 {
 		line-height: 1.375;
-		letter-spacing: -0.05em;
+		letter-spacing: normal;
 		margin: 0 0 1rem 0;
 	}
 
