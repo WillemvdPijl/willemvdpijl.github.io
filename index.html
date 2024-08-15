@@ -11,7 +11,7 @@
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 	<link rel="stylesheet" href="assets/css/main.css" />
-	<link rel="shortcut icon" type="image/png" href="favicon.ico"/>
+	<link rel="shortcut icon" type="image/png" href="favicon.ico" />
 	<noscript>
 		<link rel="stylesheet" href="assets/css/noscript.css" />
 	</noscript>
@@ -65,22 +65,24 @@
 			</div>
 		</section>
 
-		<!-- Three --><!--
-					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
-						<div class="content">
-							<h2>Fotografie</h2>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi id ante sed ex pharetra lacinia sit amet vel massa. Donec facilisis laoreet nulla eu bibendum. Donec ut ex risus. Fusce lorem lectus, pharetra pretium massa et, hendrerit vestibulum odio lorem ipsum dolor sit amet.</p>
-							<ul class="actions stacked">
-								<li><a href="#" class="button">Learn More</a></li>
-							</ul>
-						</div>
-						<div class="image">
-							<img src="images/spotlight02.jpg" alt="" />
-						</div>
-					</section>-->
+		<!-- Three -->
+		 <!--
+		<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+			<div class="content">
+				<h2>Fotografie</h2>
+				<p>Uw event of feest in beeld gebracht! Foto's voor branding en websites zijn ook mogelijk</p>
+				<!--<ul class="actions stacked">
+					<li><a href="#" class="button">Learn More</a></li>
+				</ul>-->
+			<!--</div>
+			<div class="image">
+				<img src="images/spotlight02.jpg" alt="" />
+			</div>
+		</section>
+		-->
 
 		<!-- Four -->
-		 <!--
+		<!--
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
 							<h2>Animatie</h2>
@@ -116,7 +118,8 @@
 			<section class="wrapper style1 align-left">
 				<div class="inner medium">
 					<h2>Leuke opdracht?</h2>
-					<p>Laat het me weten. Ik ben ook bereikbaar via <a href="https://www.instagram.com/cinewillem/" target="_blank">@cinewillem</a>  op instagram</p>
+					<p>Laat het me weten. Ik ben ook bereikbaar via <a href="https://www.instagram.com/cinewillem/"
+							target="_blank">@cinewillem</a> op instagram</p>
 					<form id="form">
 						<div class="fields">
 							<div class="field half">
@@ -169,29 +172,44 @@
 	<script src="assets/js/breakpoints.min.js"></script>
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
-	<script>    const btn = document.getElementById('button');
-
-		document.getElementById('form')
-			.addEventListener('submit', function (event) {
-				event.preventDefault();
-
-				btn.value = 'Verzenden...';
-
-				const serviceID = 'default_service';
-				const templateID = 'template_4s5axs9';
-
-				emailjs.sendForm(serviceID, templateID, this, 'G42N5lVIYVBPpL0uZ')
-					.then(() => {
-						btn.value = 'Verzonden!';
-						alert('Bedankt voor uw bericht!');
-					}, (err) => {
-						btn.value = 'Email verzenden';
-						//alert(JSON.stringify(err));
-						alert('Oei! Er ging iets fout, u kunt mij ook bereiken via info@cinewillem.nl of @cinewillem op Instagram.');
-					});
+	<script>
+		const btn = document.getElementById('button');
+	  
+		document.getElementById('form').addEventListener('submit', function (event) {
+		  event.preventDefault();
+	  
+		  btn.value = 'Verzenden...';
+	  
+		  const serviceID = 'default_service';
+		  const templateID = 'template_4s5axs9';
+	  
+		  // Apply stripHTMLTags function to the message field
+		  const message = stripHTMLTags(document.getElementById('message').value);
+	  
+		  // Get the form element
+		  const form = document.getElementById('form');
+	  
+		  // Update the message field value
+		  form.elements['message'].value = message;
+	  
+		  emailjs.sendForm(serviceID, templateID, form, 'G42N5lVIYVBPpL0uZ')
+			.then(() => {
+			  btn.value = 'Verzonden!';
+			  alert('Bedankt voor uw bericht!');
+			  form.reset(); // Clear the form
+			}, (err) => {
+			  btn.value = 'Email verzenden';
+			  //alert(JSON.stringify(err));
+			  alert('Oei! Er ging iets fout, u kunt mij ook bereiken via info@cinewillem.nl of @cinewillem op Instagram.');
 			});
-
-	</script>
+		});
+		
+		function stripHTMLTags(str) {
+		  return str.replace(/<[^>]*>/g, '');
+		}
+	  </script>
+	  
+	  
 
 </body>
 
