@@ -2702,6 +2702,12 @@ input, select, textarea {
 			width: 100%;
 		}
 	}
+	@media screen and (min-width: 2800px) {
+		.videobanner{
+			width: 100%;
+		}
+	}
+	
 
 	#changingimage {
 		transition: opacity 1s; /* Transition effect for opacity property */
@@ -3630,6 +3636,7 @@ input, select, textarea {
 
 		.banner.style1.fullscreen {
 			min-height: 70vh;
+			/*max-height: 90vh;*/
 		}
 
 			@media screen and (orientation: portrait) {
@@ -3690,6 +3697,14 @@ input, select, textarea {
 			-webkit-object-position: right;
 			-ms-object-position: right;
 			object-position: right;
+		}
+
+		.cinewillem-image {
+			width: 100%;
+			@media screen and (orientation: landscape) {
+				height: 80vh;
+				width: auto;
+			}
 		}
 
 /* Banner (style2) */
