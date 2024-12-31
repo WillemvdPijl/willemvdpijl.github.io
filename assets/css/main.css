@@ -7401,7 +7401,7 @@ input, select, textarea {
 
 		}
 
-	#wrapper > .wrapper.style2.invert:not(.color1):not(.color2):not(.color3):not(.color4):not(.color5):not(.color6):not(.color7) {
+	#wrapper > .wrapper.style2.invert:not(.color1):not(.color2):not(.color3):not(.color4):not(.color5):not(.color6):not(.color7):not(.color8) {
 		background-color: #222222;
 	}
 
@@ -8652,6 +8652,10 @@ input, select, textarea {
 
 		#wrapper > .color7 {
 			background-color: #6ba78c;
+		}
+
+		#wrapper > .color8 {
+			background-color: #6288aa;
 		}
 
 		#wrapper.divided > * {
