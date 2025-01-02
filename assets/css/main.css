@@ -2731,6 +2731,22 @@ input, select, textarea {
 		justify-content: center;
 		flex-direction: row;
 	}
+	
+	.bird-animation-container {
+		width: 20%;
+		display: flex;
+		padding-bottom: 2%;
+	}
+
+	@media screen and (orientation: portrait) {
+		.bird-animation-container {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			flex-direction: row
+		}
+	}
+	
 
 	.home-animatie {
 		height: 25vh;
