@@ -8692,3 +8692,36 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
+
+/*  Navigation  */
+
+.cinewillem-nav-header {
+	height: 64px;
+	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+  	background-color: #6288aa;
+  	position: fixed;
+  	top: 0;
+  	width: 100%;
+  	z-index: 1000;
+	font-weight: bold;
+}
+
+.cinewillem-nav-item {
+	float: left;
+}
+
+.cinewillem-nav-item-text {
+	display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	  height: 100%;
+}
+
+.cinewillem-navigation-buffer {
+	padding-top: 64px;
+}
