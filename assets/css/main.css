@@ -2631,6 +2631,9 @@ input, select, textarea {
 	}
 
 /* Image */
+	.cinewillem-blur {
+		filter: blur(2px);
+	}
 
 	.image {
 		border: 0;
