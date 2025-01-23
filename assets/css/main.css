@@ -8701,7 +8701,7 @@ input, select, textarea {
   	margin: 0;
   	padding: 0;
   	overflow: hidden;
-  	background-color: #6288aa;
+  	background-color: #ffffff;
   	position: fixed;
   	top: 0;
   	width: 100%;
@@ -8721,7 +8721,7 @@ input, select, textarea {
 	display: flex;
   	align-items: center;
   	justify-content: center;
-	color: white;
+	color: #6288aa;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
@@ -8730,13 +8730,13 @@ input, select, textarea {
 }
 
 .cinewillem-nav-item-text:hover {
-	background-color: #ffffff;
-	color: #6288aa;
+	background-color: #6288aa;
+	color: #ffffff;
   }
 
   .cinewillem-nav-item-text.active {
-	background-color: #ffffff;
-	color: #6288aa;
+	background-color: #6288aa;
+	color: #ffffff;
   }
 
 .cinewillem-navigation-buffer {
