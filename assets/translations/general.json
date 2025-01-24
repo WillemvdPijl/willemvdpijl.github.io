@@ -22,6 +22,104 @@
                     "nl": "Op zoek naar mijn UX-portfolio? &lt;a href=&quot;/design/index.html&quot;&gt;Klik hier&lt;/a&gt;",
                     "en": "Looking for my UX/UI portfolio &amp; resume? &lt;u&gt;&lt;a href=&quot;/design/index.html&quot;&gt;Click here&lt;/a&gt;&lt;/u&gt;"
                 }
+            },
+            {
+                "name": "videoTitle",
+                "values": {
+                    "nl": "Videografie",
+                    "en": "Videography"
+                }
+            },
+            {
+                "name": "videoBody",
+                "values": {
+                    "nl": "Ik film en edit promo videos, concerten, bruiloften, droneshots en animaties. Ik geniet ervan om bijzondere momenten vast te leggen.",
+                    "en": "I shoot and edit videos, concerts, weddings, drone-shots and animations. Capturing memories is always a privilege"
+                }
+            },
+            {
+                "name": "fotoTitle",
+                "values": {
+                    "nl": "Fotografie",
+                    "en": "Photography"
+                }
+            },
+            {
+                "name": "fotoBody",
+                "values": {
+                    "nl": "Uw event of feest in beeld gebracht! Foto's voor branding en websites zijn ook mogelijk.",
+                    "en": "Your event or party beautifully captured! Photos to be used for branding or websites are also a possibility."
+                }
+            },
+            {
+                "name": "animatieTitle",
+                "values": {
+                    "nl": "Animaties",
+                    "en": "Animations"
+                }
+            },
+            {
+                "name": "animatieBody",
+                "values": {
+                    "nl": "Voor web, video en apps. Animatie en motion design is iets wat ik graag doe.",
+                    "en": "For web, videos and apps. Contact me for the possibilities of Animation and Motion Design"
+                }
+            },
+            {
+                "name": "emailTitle",
+                "values": {
+                    "nl": "Leuke opdracht?",
+                    "en": "Get in touch!"
+                }
+            },
+            {
+                "name": "emailDescription",
+                "values": {
+                    "nl": "Laat het me weten. Ik ben ook bereikbaar via <a href=\"https://www.instagram.com/cinewillem/\" target=\"_blank\">@cinewillem</a> op instagram",
+                    "en": "Leave a message or reach me through <a href=\"https://www.linkedin.com/in/willemvdpijl/\" target=\"_blank\">my Linkedin profile</a> or <a href=\"https://www.instagram.com/cinewillem/\" target=\"_blank\">@CineWillem</a> on Instagram."
+                }
+            },
+            {
+                "name": "emailName",
+                "values": {
+                    "nl": "Naam",
+                    "en": "Name"
+                }
+            },
+            {
+                "name": "emailEmail",
+                "values": {
+                    "nl": "Email",
+                    "en": "Email"
+                }
+            },
+            {
+                "name": "emailMessage",
+                "values": {
+                    "nl": "Bericht",
+                    "en": "Message"
+                }
+            },
+            {
+                "name": "emailSend",
+                "values": {
+                    "nl": "Email verzenden",
+                    "en": "Send Message"
+                }
+            },
+            {
+                "name": "emailSending",
+                "values": {
+                    "nl": "Verzenden...",
+                    "en": "Sending..."
+                }
+            },
+            {
+                "name": "emailSendComplete",
+                "values": {
+                    "nl": "Verzonden!",
+                    "en": "Send!"
+                }
             }
         ]
     }

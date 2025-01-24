@@ -33,12 +33,20 @@ const renderElements = async (templateFields, key, jsonFilePath) => {
       const content = getContentForProperty(key, textContent);
       const property = getPropertyFromContent(propertyName, content);
       const translatedValue = parseHtmlEntities(property.values[lang]);
-      field.innerHTML = translatedValue;
+
+      // Update the button value with the translated text
+      if (field.tagName === 'INPUT' && field.type === 'submit') {
+        field.value = translatedValue;
+      } else {
+        // For other fields, update the innerHTML as before
+        field.innerHTML = translatedValue;
+      }
     }
   } catch (error) {
     console.error("Failed to load translation data:", error);
   }
 };
+
 
 
 contentBlocks.forEach((block) => {

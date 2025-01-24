@@ -85,8 +85,8 @@
 		<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-fade-in"
 			id="first">
 			<div class="content">
-				<h2>Videografie</h2>
-				<p>Ik film en edit promo videos, concerten, bruiloften, droneshots en animaties. Ik geniet ervan om
+				<h2 data-content-property="videoTitle">Videografie</h2>
+				<p data-content-property="videoBody">Ik film en edit promo videos, concerten, bruiloften, droneshots en animaties. Ik geniet ervan om
 					bijzondere momenten vast te leggen.</p>
 				<!--<ul class="actions stacked">
 								<li><a href="#" class="button">Learn More</a></li>
@@ -103,8 +103,8 @@
 		<!-- Three -->
 		<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 			<div class="content">
-				<h2>Fotografie</h2>
-				<p>Uw event of feest in beeld gebracht! Foto's voor branding en websites zijn ook mogelijk.</p>
+				<h2 data-content-property="fotoTitle">Fotografie</h2>
+				<p data-content-property="fotoBody">Uw event of feest in beeld gebracht! Foto's voor branding en websites zijn ook mogelijk.</p>
 				<!--<ul class="actions stacked">
 					<li><a href="#" class="button">Learn More</a></li>
 				</ul>-->
@@ -117,8 +117,8 @@
 		<!-- Five -->
 		<section class="wrapper style1 align-center">
 			<div class="inner">
-				<h2>Animaties</h2>
-				<p>Voor web, video en apps. Animatie en motion design is iets wat ik graag doe.</p>
+				<h2 data-content-property="animatieTitle">Animaties</h2>
+				<p data-content-property="animatieBody">Voor web, video en apps. Animatie en motion design is iets wat ik graag doe.</p>
 			</div>
 			<div class="animations-container">
 				<div class="home-animatie" id="vogel"></div>
@@ -134,26 +134,26 @@
 			<!-- Seven -->
 			<section class="wrapper style1 align-left">
 				<div class="inner medium">
-					<h2>Leuke opdracht?</h2>
-					<p>Laat het me weten. Ik ben ook bereikbaar via <a href="https://www.instagram.com/cinewillem/"
+					<h2 data-content-property="emailTitle">Leuke opdracht?</h2>
+					<p data-content-property="emailDescription">Laat het me weten. Ik ben ook bereikbaar via <a href="https://www.instagram.com/cinewillem/"
 							target="_blank">@cinewillem</a> op instagram</p>
 					<form id="form">
 						<div class="fields">
 							<div class="field half">
-								<label for="name">Naam</label>
+								<label for="name" data-content-property="emailName">Naam</label>
 								<input type="text" name="from_name" id="from_name" value="" />
 							</div>
 							<div class="field half">
-								<label for="email">Email</label>
+								<label for="email" data-content-property="emailEmail">Email</label>
 								<input type="text" name="reply_to" id="reply_to" value="" />
 							</div>
 							<div class="field">
-								<label for="message">Bericht</label>
+								<label for="message" data-content-property="emailMessage">Bericht</label>
 								<textarea type="text" name="message" id="message" rows="6"></textarea>
 							</div>
 						</div>
 						<ul class="actions special">
-							<li><input type="submit" id="button" value="Email verzenden" /></li>
+							<li><input type="submit" id="button" value="Email verzenden"data-content-property="emailSend"/></li>
 						</ul>
 					</form>
 
