@@ -4,13 +4,13 @@ const contentBlocks = [...document.querySelectorAll(".content-block")];
 
 const getContentForProperty = (key, dataset) => {
   const content = dataset.find((data) => data.key === key);
-  console.log(content);
+  // console.log(content);
   return content;
 };
 
 const getPropertyFromContent = (propertyName, content) => {
   const property = content.properties.find((data) => data.name === propertyName);
-  console.log(property);
+  // console.log(property);
   return property;
 };
 

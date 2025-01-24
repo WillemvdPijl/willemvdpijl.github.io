@@ -8724,6 +8724,13 @@ input, select, textarea {
 	padding-left: 0px;
 }
 
+.cinewillem-nav-item-right {
+	float: right;
+	display: block;
+	height: 100%;
+	padding-left: 0px;
+}
+
 .cinewillem-nav-item-text {
 	display: flex;
   	align-items: center;
@@ -8752,13 +8759,20 @@ input, select, textarea {
 
 .cinewillem-nav-spacing {
 	padding-left: 2.5rem;
+	padding-right: 2.5rem;
 	margin: 0 auto 0 auto;
 	width: 63rem; /* used to be 64rem */
+}
+
+.cinewillem-language-select {
+	height: 100%;
+	border-color: #ffffff;
 }
 
 @media screen and (orientation: portrait) {
 	.cinewillem-nav-spacing {
 		padding-left: 0px;
+		padding-right: 0px;
 		margin: 0 auto 0 auto;
 		width: 96rem;
 	}
@@ -8767,6 +8781,7 @@ input, select, textarea {
 @media screen and (min-width: 800px) {
 	.cinewillem-nav-spacing {
 		padding-left: 4.5rem;
+		padding-right: 4.5rem;
 		margin: 0 auto 0 auto;
 		width: 96rem;
 	}
@@ -8776,6 +8791,7 @@ input, select, textarea {
 @media screen and (min-width: 2600px) {
 	.cinewillem-nav-spacing {
 		padding-left: 4.5rem;
+		padding-right: 4.5rem;
 		margin: 0 auto 0 auto;
 		width: 80%;
 	}
