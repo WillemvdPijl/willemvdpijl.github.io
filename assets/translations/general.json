@@ -1,0 +1,28 @@
+[
+    {
+        "key": "home",
+        "properties": [
+            {
+                "name": "intro",
+                "values": {
+                    "nl": "Het maken van video's, fotos & animatie's vind ik geweldig. Neem een kijkje wat ik te bieden heb!",
+                    "en": "I love editing & shooting videos, photos and creating animations. Take a look at what I have to offer!"
+                }
+            },
+            {
+                "name": "verder",
+                "values": {
+                    "nl": "Verder kijken",
+                    "en": "Take a look"
+                }
+            },
+            {
+                "name": "to-ux",
+                "values": {
+                    "nl": "Op zoek naar mijn UX-portfolio? &lt;a href=&quot;/design/index.html&quot;&gt;Klik hier&lt;/a&gt;",
+                    "en": "Looking for my UX/UI portfolio &amp; resume? &lt;u&gt;&lt;a href=&quot;/design/index.html&quot;&gt;Click here&lt;/a&gt;&lt;/u&gt;"
+                }
+            }
+        ]
+    }
+]
