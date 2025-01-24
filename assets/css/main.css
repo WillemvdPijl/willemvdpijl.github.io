@@ -8721,6 +8721,7 @@ input, select, textarea {
 	float: left;
 	display: block;
 	height: 100%;
+	padding-left: 0px;
 }
 
 .cinewillem-nav-item-text {
@@ -8752,7 +8753,35 @@ input, select, textarea {
 .cinewillem-nav-spacing {
 	padding-left: 2.5rem;
 	margin: 0 auto 0 auto;
-	width: 96rem; /* used to be 64rem */
+	width: 63rem; /* used to be 64rem */
 }
+
+@media screen and (orientation: portrait) {
+	.cinewillem-nav-spacing {
+		padding-left: 0px;
+		margin: 0 auto 0 auto;
+		width: 96rem;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	.cinewillem-nav-spacing {
+		padding-left: 4.5rem;
+		margin: 0 auto 0 auto;
+		width: 96rem;
+	}
+	
+}
+
+@media screen and (min-width: 2600px) {
+	.cinewillem-nav-spacing {
+		padding-left: 4.5rem;
+		margin: 0 auto 0 auto;
+		width: 80%;
+	}
+	
+}
+
+
 
 
