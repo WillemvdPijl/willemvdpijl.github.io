@@ -8767,6 +8767,8 @@ input, select, textarea {
 .cinewillem-language-select {
 	height: 100%;
 	border-color: #ffffff;
+	color: #6288aa;
+	font-weight: bold;
 }
 
 @media screen and (orientation: portrait) {

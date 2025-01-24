@@ -1,16 +1,14 @@
-let lang = "en";
+let lang = "nl";
 
 const contentBlocks = [...document.querySelectorAll(".content-block")];
 
 const getContentForProperty = (key, dataset) => {
   const content = dataset.find((data) => data.key === key);
-  // console.log(content);
   return content;
 };
 
 const getPropertyFromContent = (propertyName, content) => {
   const property = content.properties.find((data) => data.name === propertyName);
-  // console.log(property);
   return property;
 };
 
@@ -34,11 +32,9 @@ const renderElements = async (templateFields, key, jsonFilePath) => {
       const property = getPropertyFromContent(propertyName, content);
       const translatedValue = parseHtmlEntities(property.values[lang]);
 
-      // Update the button value with the translated text
       if (field.tagName === 'INPUT' && field.type === 'submit') {
         field.value = translatedValue;
       } else {
-        // For other fields, update the innerHTML as before
         field.innerHTML = translatedValue;
       }
     }
@@ -47,11 +43,21 @@ const renderElements = async (templateFields, key, jsonFilePath) => {
   }
 };
 
-
+const languageDropdown = document.getElementById("languageDropdown");
+languageDropdown.addEventListener("change", (event) => {
+  lang = event.target.value;
+  // Re-render the content blocks with the updated language
+  contentBlocks.forEach((block) => {
+    const contentKey = block.dataset.contentKey;
+    const templateFields = block.querySelectorAll("[data-content-property]");
+    const jsonFilePath = block.dataset.jsonPath;
+    renderElements(templateFields, contentKey, jsonFilePath);
+  });
+});
 
 contentBlocks.forEach((block) => {
   const contentKey = block.dataset.contentKey;
   const templateFields = block.querySelectorAll("[data-content-property]");
-  const jsonFilePath = block.dataset.jsonPath; // Add data attribute "data-json-path" to specify the JSON file path
+  const jsonFilePath = block.dataset.jsonPath;
   renderElements(templateFields, contentKey, jsonFilePath);
 });
