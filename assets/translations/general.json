@@ -75,8 +75,15 @@
             {
                 "name": "emailDescription",
                 "values": {
-                    "nl": "Laat het me weten. Ik ben ook bereikbaar via <a href=\"https://www.instagram.com/cinewillem/\" target=\"_blank\">@cinewillem</a> op instagram",
-                    "en": "Leave a message or reach me through <a href=\"https://www.linkedin.com/in/willemvdpijl/\" target=\"_blank\">my Linkedin profile</a> or <a href=\"https://www.instagram.com/cinewillem/\" target=\"_blank\">@CineWillem</a> on Instagram."
+                    "nl": "Laat het me weten. Ik ben ook bereikbaar via <a href=\"https://www.instagram.com/cinewillem/\" target=\"_blank\">@cinewillem</a> op Instagram of mail <a href=\"mailto:info@cinewillem.nl\">info@cinewillem.nl</a>.",
+                    "en": "Let me know. I can also be reached via <a href=\"https://www.instagram.com/cinewillem/\" target=\"_blank\">@cinewillem</a> on Instagram or email <a href=\"mailto:info@cinewillem.nl\">info@cinewillem.nl</a>."
+                }
+            },
+            {
+                "name": "emailDesignDescription",
+                "values": {
+                    "nl": "Laat een bericht achter op <a href=\"mailto:info@cinewillem.nl\">info@cinewillem.nl</a>. Je kunt me ook bereiken via <a href=\"https://www.linkedin.com/in/willemvdpijl/\" target=\"_blank\">mijn LinkedIn-profiel</a> of <a href=\"https://www.instagram.com/cinewillem/\" target=\"_blank\">@CineWillem</a> op Instagram.",
+                    "en": "Leave a message at <a href=\"mailto:info@cinewillem.nl\">info@cinewillem.nl</a>. You can also reach me through <a href=\"https://www.linkedin.com/in/willemvdpijl/\" target=\"_blank\">my Linkedin profile</a> or <a href=\"https://www.instagram.com/cinewillem/\" target=\"_blank\">@CineWillem</a> on Instagram."
                 }
             },
             {
