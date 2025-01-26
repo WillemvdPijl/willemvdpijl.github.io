@@ -47,7 +47,7 @@
 			<li class="cinewillem-nav-item">
 				<a class="cinewillem-nav-item-text" href="./design/index.html">Design Portfolio</a>
 			</li>
-			<li  class="cinewillem-nav-item-right">
+			<li class="cinewillem-nav-item-right">
 				<select class="cinewillem-language-select" name="language" id="languageDropdown">
 					<option value="nl">NL</option>
 					<option value="en">EN</option>
@@ -57,7 +57,8 @@
 	</div>
 
 	<!-- Wrapper -->
-	<div id="wrapper" class="content-block divided cinewillem-navigation-buffer" data-content-key="home" data-json-path="assets/translations/general.json">
+	<div id="wrapper" class="content-block divided cinewillem-navigation-buffer" data-content-key="home"
+		data-json-path="assets/translations/general.json">
 
 		<!-- One -->
 		<section
@@ -71,7 +72,8 @@
 				<!--Verder kijken-->
 				<ul class="actions stacked">
 					<li>
-						<a href="#first" class="button big wide smooth-scroll-middle" data-content-property="verder">Verder kijken</a>
+						<a href="#first" class="button big wide smooth-scroll-middle"
+							data-content-property="verder">Verder kijken</a>
 					</li>
 					<h5 class="major" data-content-property="to-ux">
 						Looking for my UX/UI portfolio & resume? <u><a href="/design/index.html">Click here</a></u>
@@ -92,7 +94,8 @@
 			id="first">
 			<div class="content">
 				<h2 data-content-property="videoTitle">Videografie</h2>
-				<p data-content-property="videoBody">Ik film en edit promo videos, concerten, bruiloften, droneshots en animaties. Ik geniet ervan om
+				<p data-content-property="videoBody">Ik film en edit promo videos, concerten, bruiloften, droneshots en
+					animaties. Ik geniet ervan om
 					bijzondere momenten vast te leggen.</p>
 				<!--<ul class="actions stacked">
 								<li><a href="#" class="button">Learn More</a></li>
@@ -110,7 +113,8 @@
 		<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 			<div class="content">
 				<h2 data-content-property="fotoTitle">Fotografie</h2>
-				<p data-content-property="fotoBody">Uw event of feest in beeld gebracht! Foto's voor branding en websites zijn ook mogelijk.</p>
+				<p data-content-property="fotoBody">Uw event of feest in beeld gebracht! Foto's voor branding en
+					websites zijn ook mogelijk.</p>
 				<!--<ul class="actions stacked">
 					<li><a href="#" class="button">Learn More</a></li>
 				</ul>-->
@@ -124,7 +128,8 @@
 		<section class="wrapper style1 align-center">
 			<div class="inner">
 				<h2 data-content-property="animatieTitle">Animaties</h2>
-				<p data-content-property="animatieBody">Voor web, video en apps. Animatie en motion design is iets wat ik graag doe.</p>
+				<p data-content-property="animatieBody">Voor web, video en apps. Animatie en motion design is iets wat
+					ik graag doe.</p>
 			</div>
 			<div class="animations-container">
 				<div class="home-animatie" id="vogel"></div>
@@ -141,8 +146,9 @@
 			<section class="wrapper style1 align-left">
 				<div class="inner medium">
 					<h2 data-content-property="emailTitle">Leuke opdracht?</h2>
-					<p data-content-property="emailDescription">Laat het me weten. Ik ben ook bereikbaar via <a href="https://www.instagram.com/cinewillem/"
-							target="_blank">@cinewillem</a> op instagram of mail <a href="mailto:info@cinewillem.nl">info@cinewillem.nl</a>.</p> 
+					<p data-content-property="emailDescription">Laat het me weten. Ik ben ook bereikbaar via <a
+							href="https://www.instagram.com/cinewillem/" target="_blank">@cinewillem</a> op instagram of
+						mail <a href="mailto:info@cinewillem.nl">info@cinewillem.nl</a>.</p>
 					<form id="form">
 						<div class="fields">
 							<div class="field half">
@@ -159,7 +165,8 @@
 							</div>
 						</div>
 						<ul class="actions special">
-							<li><input type="submit" id="button" value="Email verzenden"data-content-property="emailSend"/></li>
+							<li><input type="submit" id="button" value="Email verzenden"
+									data-content-property="emailSend" /></li>
 						</ul>
 					</form>
 
@@ -196,40 +203,65 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script>
-		const btn = document.getElementById('button');
+const btn = document.getElementById('button');
 
-		document.getElementById('form').addEventListener('submit', function (event) {
-			event.preventDefault();
+document.getElementById('form').addEventListener('submit', function (event) {
 
-			btn.value = 'Verzenden...';
+    const lang = document.getElementById("languageDropdown").value;
+    let sent = '';
+    let sending = '';
+    let sendAction = '';
+    let sendingSuccess = '';
+    let sendingError = '';
+	let emptyFields = '';
 
-			const serviceID = 'default_service';
-			const templateID = 'template_4s5axs9';
+    if (lang == 'nl') {
+        sent = 'Verzonden!';
+        sending = 'Verzenden...';
+        sendAction = 'Email verzenden';
+        sendingSuccess = 'Bedankt voor uw bericht!';
+        sendingError = 'Oei! Er ging iets fout, u kunt mij ook bereiken via info@cinewillem.nl of @cinewillem op Instagram.';
+		emptyFields = 'Vul alstublieft alle velden in.';
+    } else {
+        sent = 'Sent!';
+        sending = 'Sending...';
+        sendAction = 'Send Message';
+        sendingSuccess = 'Thank you for your message!';
+        sendingError = 'Oops! Something went wrong, you can also reach me at info@cinewillem.nl or @cinewillem on Instagram.';
+		emptyFields = 'Please fill in al the fields.';
+    }
 
-			// Apply stripHTMLTags function to the message field
-			const message = stripHTMLTags(document.getElementById('message').value);
+    event.preventDefault();
 
-			// Get the form element
-			const form = document.getElementById('form');
+    const serviceID = 'default_service';
+    const templateID = 'template_4s5axs9';
 
-			// Update the message field value
-			form.elements['message'].value = message;
+    const form = document.getElementById('form');
+    const message = stripHTMLTags(document.getElementById('message').value);
 
-			emailjs.sendForm(serviceID, templateID, form, 'G42N5lVIYVBPpL0uZ')
-				.then(() => {
-					btn.value = 'Verzonden!';
-					alert('Bedankt voor uw bericht!');
-					form.reset(); // Clear the form
-				}, (err) => {
-					btn.value = 'Email verzenden';
-					//alert(JSON.stringify(err));
-					alert('Oei! Er ging iets fout, u kunt mij ook bereiken via info@cinewillem.nl of @cinewillem op Instagram.');
-				});
-		});
+    if (!message || message.trim() === '') { // Check if the message field is empty
+        alert(emptyFields); // Display an error message
+        return;
+    }
 
-		function stripHTMLTags(str) {
-			return str.replace(/<[^>]*>/g, '');
-		}
+    btn.value = sending;
+
+    form.elements['message'].value = message;
+
+    emailjs.sendForm(serviceID, templateID, form, 'G42N5lVIYVBPpL0uZ')
+        .then(() => {
+            btn.value = sent;
+            alert(sendingSuccess);
+            form.reset(); // Clear the form
+        }, (err) => {
+            btn.value = sendAction;
+            alert(sendingError);
+        });
+});
+
+function stripHTMLTags(str) {
+    return str.replace(/<[^>]*>/g, '');
+}
 	</script>
 
 	<script>
