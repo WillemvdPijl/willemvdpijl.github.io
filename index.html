@@ -203,67 +203,68 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script>
-const btn = document.getElementById('button');
+		const btn = document.getElementById('button');
 
-document.getElementById('form').addEventListener('submit', function (event) {
+		document.getElementById('form').addEventListener('submit', function (event) {
 
-    const lang = document.getElementById("languageDropdown").value;
-    let sent = '';
-    let sending = '';
-    let sendAction = '';
-    let sendingSuccess = '';
-    let sendingError = '';
-	let emptyFields = '';
+			const lang = document.getElementById("languageDropdown").value;
+			let sent = '';
+			let sending = '';
+			let sendAction = '';
+			let sendingSuccess = '';
+			let sendingError = '';
+			let emptyFields = '';
 
-    if (lang == 'nl') {
-        sent = 'Verzonden!';
-        sending = 'Verzenden...';
-        sendAction = 'Email verzenden';
-        sendingSuccess = 'Bedankt voor uw bericht!';
-        sendingError = 'Oei! Er ging iets fout, u kunt mij ook bereiken via info@cinewillem.nl of @cinewillem op Instagram.';
-		emptyFields = 'Vul alstublieft alle velden in.';
-    } else {
-        sent = 'Sent!';
-        sending = 'Sending...';
-        sendAction = 'Send Message';
-        sendingSuccess = 'Thank you for your message!';
-        sendingError = 'Oops! Something went wrong, you can also reach me at info@cinewillem.nl or @cinewillem on Instagram.';
-		emptyFields = 'Please fill in al the fields.';
-    }
+			if (lang == 'nl') {
+				sent = 'Verzonden!';
+				sending = 'Verzenden...';
+				sendAction = 'Email verzenden';
+				sendingSuccess = 'Bedankt voor uw bericht!';
+				sendingError = 'Oei! Er ging iets fout, u kunt mij ook bereiken via info@cinewillem.nl of @cinewillem op Instagram.';
+				emptyFields = 'Vul alstublieft alle velden in.';
+			} else {
+				sent = 'Sent!';
+				sending = 'Sending...';
+				sendAction = 'Send Message';
+				sendingSuccess = 'Thank you for your message!';
+				sendingError = 'Oops! Something went wrong, you can also reach me at info@cinewillem.nl or @cinewillem on Instagram.';
+				emptyFields = 'Please fill in al the fields.';
+			}
 
-    event.preventDefault();
+			event.preventDefault();
 
-    const serviceID = 'default_service';
-    const templateID = 'template_4s5axs9';
+			const serviceID = 'default_service';
+			const templateID = 'template_4s5axs9';
 
-    const form = document.getElementById('form');
-    const message = stripHTMLTags(document.getElementById('message').value);
+			const form = document.getElementById('form');
+			const message = stripHTMLTags(document.getElementById('message').value);
 
-    if (!message || message.trim() === '') { // Check if the message field is empty
-        alert(emptyFields); // Display an error message
-        return;
-    }
+			if (!message || message.trim() === '') { // Check if the message field is empty
+				alert(emptyFields); // Display an error message
+				return;
+			}
 
-    btn.value = sending;
+			btn.value = sending;
 
-    form.elements['message'].value = message;
+			form.elements['message'].value = message;
 
-    emailjs.sendForm(serviceID, templateID, form, 'G42N5lVIYVBPpL0uZ')
-        .then(() => {
-            btn.value = sent;
-            alert(sendingSuccess);
-            form.reset(); // Clear the form
-        }, (err) => {
-            btn.value = sendAction;
-            alert(sendingError);
-        });
-});
+			emailjs.sendForm(serviceID, templateID, form, 'G42N5lVIYVBPpL0uZ')
+				.then(() => {
+					btn.value = sent;
+					alert(sendingSuccess);
+					form.reset(); // Clear the form
+				}, (err) => {
+					btn.value = sendAction;
+					alert(sendingError);
+				});
+		});
 
-function stripHTMLTags(str) {
-    return str.replace(/<[^>]*>/g, '');
-}
+		function stripHTMLTags(str) {
+			return str.replace(/<[^>]*>/g, '');
+		}
 	</script>
 
+	<!-- Image section -->
 	<script>
 		window.addEventListener('DOMContentLoaded', (event) => {
 			var image = document.getElementById("changingimage");
@@ -285,8 +286,6 @@ function stripHTMLTags(str) {
 			setInterval(updateImage, 5000);
 		});
 	</script>
-
-
 
 </body>
 

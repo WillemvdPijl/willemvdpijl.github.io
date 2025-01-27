@@ -28,6 +28,7 @@
 
 
 <body class="is-preload">
+	<script src="../assets/translations/translations-framework.js" type="module"></script>
 	<script src="../assets/js/bodymovin.js"></script>
 
 	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
@@ -45,11 +46,17 @@
 			<li class="cinewillem-nav-item">
 				<a class="cinewillem-nav-item-text active" href="./index.html">Design Portfolio</a>
 			</li>
+			<li class="cinewillem-nav-item-right">
+				<select class="cinewillem-language-select" name="language" id="languageDropdown">
+					<option value="nl">NL</option>
+					<option value="en">EN</option>
+				</select>
+			</li>
 		</ul>
 	</div>
 
 	<!-- Wrapper -->
-	<div id="wrapper" class="divided cinewillem-navigation-buffer">
+	<div id="wrapper" class="content-block divided cinewillem-navigation-buffer"  data-content-key="home" data-json-path="../assets/translations/general.json">
 
 		<!-- One -->
 		<section
@@ -143,27 +150,28 @@
 		<!-- Contact -->
 		<section class="wrapper style1 align-left">
 			<div class="inner medium">
-				<h2>Get in touch!</h2>
-				<p>Leave a message at <a href="mailto:info@cinewillem.nl">info@cinewillem.nl</a>. You can also reach me through <a href="https://www.linkedin.com/in/willemvdpijl/"
+				<h2 data-content-property="emailTitle">Get in touch!</h2>
+				<p data-content-property="emailDesignDescription">Leave a message at <a href="mailto:info@cinewillem.nl">info@cinewillem.nl</a>. You can also reach me through <a href="https://www.linkedin.com/in/willemvdpijl/"
 						target="_blank">my Linkedin profile</a> or <a href="https://www.instagram.com/cinewillem/"
 						target="_blank">@CineWillem</a> on Instagram.</p>
 				<form id="form">
 					<div class="fields">
 						<div class="field half">
-							<label for="name">Name</label>
+							<label for="name" data-content-property="emailName">Naam</label>
 							<input type="text" name="from_name" id="from_name" value="" />
 						</div>
 						<div class="field half">
-							<label for="email">Email</label>
+							<label for="email" data-content-property="emailEmail">Email</label>
 							<input type="text" name="reply_to" id="reply_to" value="" />
 						</div>
 						<div class="field">
-							<label for="message">Message</label>
+							<label for="message" data-content-property="emailMessage">Bericht</label>
 							<textarea type="text" name="message" id="message" rows="6"></textarea>
 						</div>
 					</div>
 					<ul class="actions special">
-						<li><input type="submit" id="button" value="Send message" /></li>
+						<li><input type="submit" id="button" value="Email verzenden"
+								data-content-property="emailSend" /></li>
 					</ul>
 				</form>
 
@@ -203,31 +211,56 @@
 		const btn = document.getElementById('button');
 
 		document.getElementById('form').addEventListener('submit', function (event) {
-			event.preventDefault();
 
-			btn.value = 'Sending...';
+			const lang = document.getElementById("languageDropdown").value;
+			let sent = '';
+			let sending = '';
+			let sendAction = '';
+			let sendingSuccess = '';
+			let sendingError = '';
+			let emptyFields = '';
+
+			if (lang == 'nl') {
+				sent = 'Verzonden!';
+				sending = 'Verzenden...';
+				sendAction = 'Email verzenden';
+				sendingSuccess = 'Bedankt voor uw bericht!';
+				sendingError = 'Oei! Er ging iets fout, u kunt mij ook bereiken via info@cinewillem.nl of @cinewillem op Instagram.';
+				emptyFields = 'Vul alstublieft alle velden in.';
+			} else {
+				sent = 'Sent!';
+				sending = 'Sending...';
+				sendAction = 'Send Message';
+				sendingSuccess = 'Thank you for your message!';
+				sendingError = 'Oops! Something went wrong, you can also reach me at info@cinewillem.nl or @cinewillem on Instagram.';
+				emptyFields = 'Please fill in al the fields.';
+			}
+
+			event.preventDefault();
 
 			const serviceID = 'default_service';
 			const templateID = 'template_4s5axs9';
 
-			// Apply stripHTMLTags function to the message field
+			const form = document.getElementById('form');
 			const message = stripHTMLTags(document.getElementById('message').value);
 
-			// Get the form element
-			const form = document.getElementById('form');
+			if (!message || message.trim() === '') { // Check if the message field is empty
+				alert(emptyFields); // Display an error message
+				return;
+			}
 
-			// Update the message field value
+			btn.value = sending;
+
 			form.elements['message'].value = message;
 
 			emailjs.sendForm(serviceID, templateID, form, 'G42N5lVIYVBPpL0uZ')
 				.then(() => {
-					btn.value = 'Successfully sent!';
-					alert('Thank you for your message!');
+					btn.value = sent;
+					alert(sendingSuccess);
 					form.reset(); // Clear the form
 				}, (err) => {
-					btn.value = 'Email verzenden';
-					//alert(JSON.stringify(err));
-					alert('Oops.. something went wrong! you can also reach me through: info@cinewillem.nl or @cinewillem on Instagram.');
+					btn.value = sendAction;
+					alert(sendingError);
 				});
 		});
 
@@ -235,30 +268,6 @@
 			return str.replace(/<[^>]*>/g, '');
 		}
 	</script>
-	<!--
-	<script>
-		window.addEventListener('DOMContentLoaded', (event) => {
-			var image = document.getElementById("changingimage");
-			var images = ["images/spotlight02.jpg", "images/spotlight03.jpg", "images/spotlight04.jpg", "images/spotlight05.jpg", "images/spotlight01.jpg"];
-			var index = 0;
-
-			function updateImage() {
-				image.style.opacity = 0; // Set opacity to 0 for fading effect
-
-				// Wait for the fade animation to complete before updating the image source
-				setTimeout(() => {
-					image.src = images[index];
-					index = (index + 1) % images.length;
-					image.style.opacity = 1; // Set opacity back to 1 for the next image
-				}, 500);
-
-			}
-
-			setInterval(updateImage, 5000);
-		});
-	</script>
--->
-
 
 </body>
 
