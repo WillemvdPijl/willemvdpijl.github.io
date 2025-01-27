@@ -127,6 +127,41 @@
                     "nl": "Verzonden!",
                     "en": "Send!"
                 }
+            },
+            {
+                "name": "uxSubtitle",
+                "values": {
+                    "nl": "UX/UI Designer & Business Analist",
+                    "en": "UX/UI Designer & Business Analyst"
+                }
+            },
+            {
+                "name": "uxDescription",
+                "values": {
+                    "nl": "Dankzij mijn technische achtergrond kan ik effectief communiceren binnen elk aspect van software development",
+                    "en": "My technical background allows me to communicate effectively on every level of the software development process."
+                }
+            },
+            {
+                "name": "downloadCV",
+                "values": {
+                    "nl": "Download CV",
+                    "en": "Download Resume"
+                }
+            },
+            {
+                "name": "to-video",
+                "values": {
+                    "nl": "Op zoek naar mijn videoservices? &lt;u&gt;&lt;a href=&quot;../index.html&quot;&gt;Klik hier&lt;/a&gt;&lt;/u&gt;",
+                    "en": "Looking for my video services? &lt;u&gt;&lt;a href=&quot;../index.html&quot;&gt;Click here&lt;/a&gt;&lt;/u&gt;"
+                }
+            },
+            {
+                "name": "checkout",
+                "values": {
+                    "nl": "&lt;strong&gt;Neem een kijkje bij mijn projecten!&lt;/strong&gt; &lt;br /&gt;&lt;br /&gt; De meeste projecten waar ik aan heb gewerkt kan ik niet zomaar delen.&lt;br /&gt; Ik licht daarom enkele voorbeelden van uitdagingen uit die ik tindens mijn werk als UX/UI Designer ben tegen gekomen. De voorbeelden zijn abstract gemaakt en out of context.",
+                    "en": "&lt;strong&gt;Check out the projects below!&lt;/strong&gt; &lt;br /&gt;&lt;br /&gt; Most of the projects I worked on I cannot freely share.&lt;br /&gt; Therefore I will highlight some design challenges I encountered during my work as a UX/UI Designer out of context."
+                }
             }
         ]
     }
