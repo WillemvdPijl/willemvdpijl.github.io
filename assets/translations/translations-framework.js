@@ -1,5 +1,11 @@
 let lang = "nl";
 
+let browserLanguage = navigator.language.split('-')[0];
+
+if (browserLanguage) {
+  lang = browserLanguage;
+}
+
 const contentBlocks = [...document.querySelectorAll(".content-block")];
 
 const getContentForProperty = (key, dataset) => {

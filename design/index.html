@@ -128,7 +128,8 @@
 			class="banner style3 orient-right content-align-left image-position-center onload-image-fade-in onload-content-fade-right">
 			<div class="content">
 				<h2 data-content-property="caseStainedglassTitle">Beacon of hope</h2>
-				<p data-content-property="caseStainedglassDesciption" class="major">Stained glass brought to life. A beacon of hope during the pandemic.
+				<p data-content-property="caseStainedglassDescription" class="major">Stained glass brought to life. A
+					beacon of hope during the pandemic.
 				</p>
 				<ul class="actions stacked">
 					<li data-content-property="checkBackLater">
@@ -210,6 +211,21 @@
 	<script src="../assets/js/breakpoints.min.js"></script>
 	<script src="../assets/js/util.js"></script>
 	<script src="../assets/js/main.js"></script>
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+
+			var dropdown = document.getElementById('languageDropdown');
+			
+			var browserLanguage = navigator.language.split('-')[0].toLowerCase(); // Get the browser language (e.g., "nl" from "nl-NL")
+			if (browserLanguage === 'nl') {
+				dropdown.value = 'nl'; // Set the dropdown value to 'nl' if the browser language is 'nl'
+			} else {
+				dropdown.value = 'en'; // Set the dropdown value to 'en' for all other cases (assuming English is the default)
+			}
+
+		});
+
+	</script>
 	<script>
 		const btn = document.getElementById('button');
 

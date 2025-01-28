@@ -198,6 +198,21 @@
 	<script src="assets/js/util.js"></script>
 	<script src="assets/js/main.js"></script>
 	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+
+			var dropdown = document.getElementById('languageDropdown');
+			var browserLanguage = navigator.language.split('-')[0].toLowerCase(); // Get the browser language (e.g., "nl" from "nl-NL")
+
+			if (browserLanguage === 'nl') {
+				dropdown.value = 'nl'; // Set the dropdown value to 'nl' if the browser language is 'nl'
+			} else {
+				dropdown.value = 'en'; // Set the dropdown value to 'en' for all other cases (assuming English is the default)
+			}
+
+		});
+
+	</script>
+	<script>
 		const btn = document.getElementById('button');
 
 		document.getElementById('form').addEventListener('submit', function (event) {
