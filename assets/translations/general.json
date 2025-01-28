@@ -159,8 +159,57 @@
             {
                 "name": "checkout",
                 "values": {
-                    "nl": "&lt;strong&gt;Neem een kijkje bij mijn projecten!&lt;/strong&gt; &lt;br /&gt;&lt;br /&gt; De meeste projecten waar ik aan heb gewerkt kan ik niet zomaar delen.&lt;br /&gt; Ik licht daarom enkele voorbeelden van uitdagingen uit die ik tindens mijn werk als UX/UI Designer ben tegen gekomen. De voorbeelden zijn abstract gemaakt en out of context.",
+                    "nl": "&lt;strong&gt;Neem een kijkje bij mijn projecten!&lt;/strong&gt; &lt;br /&gt;&lt;br /&gt; De meeste projecten waar ik aan heb gewerkt kan ik niet zomaar delen.&lt;br /&gt; Ik licht daarom enkele voorbeelden van uitdagingen uit die ik tijdens mijn werk als UX/UI Designer ben tegen gekomen. De voorbeelden zijn abstract gemaakt en out of context.",
                     "en": "&lt;strong&gt;Check out the projects below!&lt;/strong&gt; &lt;br /&gt;&lt;br /&gt; Most of the projects I worked on I cannot freely share.&lt;br /&gt; Therefore I will highlight some design challenges I encountered during my work as a UX/UI Designer out of context."
+                }
+            },
+            {
+                "name": "caseWarehouseTitle",
+                "values": {
+                    "nl": "Van winkel tot magazijn",
+                    "en": "From store to warehouse"
+                }
+            },
+            {
+                "name": "caseWarehouseDescription",
+                "values": {
+                    "nl": "&lt;p&gt;Het opnieuw ontwerpen van &lt;strong&gt;logistieke processsen &lt;/strong&gt; voor fysieke winkels. Het doel van deze usecase was om het process van producten terug sturen naar het magazijn te &lt;strong&gt; vernieuwen en te verbeteren.&lt;/strong&gt; De head-office kon ook zelf producten zelf terug vragen. De context voor deze feature was vrij groot: &lt;strong&gt;100+ winkels &lt;strong&gt;&lt;/p&gt;",
+                    "en": "&lt;p&gt;Redesigning &lt;strong&gt;product logistic processes&lt;/strong&gt; for physical stores. The goal of this feature was to provide an &lt;strong&gt;updated process&lt;/strong&gt; for sending products back to the warehouse of physical stores. Also included in the scope was for the head-office to request products back to the warehouse. The scope of this process was quite big; &lt;strong&gt;100+ stores&lt;/strong&gt;.&lt;/p&gt;"
+                }
+            },
+            {
+                "name": "caseWarehouseButton",
+                "values": {
+                    "nl": "Kijk verder",
+                    "en": "Take a look"
+                }
+            },
+            {
+                "name": "caseStainedglassTitle",
+                "values": {
+                    "nl": "Teken van hoop",
+                    "en": "Beacon of hope"
+                }
+            },
+            {
+                "name": "caseStainedglassDesciption",
+                "values": {
+                    "nl": "Glas in lood tot leven gebracht. Een teken van hoop tijdens de pandemie",
+                    "en": "Stained glass brought to life. A beacon of hope during the pandemic."
+                }
+            },
+            {
+                "name": "checkBackLater",
+                "values": {
+                    "nl": "&lt;strong&gt;Kom later terug&lt;/strong&gt; voor een subpagina met &lt;strong&gt;meer informatie...&lt;/strong&gt;&lt;/h4&gt;",
+                    "en": "&lt;strong&gt;Check back later&lt;/strong&gt; for a sub-page with &lt;strong&gt;more info...&lt;/strong&gt;&lt;/h4&gt;"
+                }
+            },
+            {
+                "name": "moreToCome",
+                "values": {
+                    "nl": "&lt;strong&gt;Meer projecten...&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;Binnenkort!&lt;/strong&gt;",
+                    "en": "&lt;strong&gt;More to come...&lt;/strong&gt;&lt;br&gt;&lt;strong&gt;Very soon!&lt;/strong&gt;"
                 }
             }
         ]
