@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Korfball Game</title>
+  <style>
+    canvas { border: 1px solid #000; }
+
+    #powerBarWrapper {
+      position: relative;
+      width: 200px;
+      height: 20px;
+      border: 1px solid #000;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    #powerBar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: 100%;
+      background-color: green;
+      transition: width 0.1s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="gameCanvas" width="800" height="400"></canvas>
+  <div id="powerBarWrapper">
+    <div id="powerBar"></div>
+  </div>
+  <script>
+    window.addEventListener("DOMContentLoaded", setup);
+
+    // Game variables
+    let gameCanvas, ctx;
+    let player, ball, korf;
+    let isMousePressed = false;
+    let throwPower = 0;
+    let throwAngle = 0;
+    let score = 0;
+    let missCount = 0;
+    let korfPosition = 0;
+    const maxMissCount = 5;
+    const gravity = 0.8;
+    const korfIncrement = 50;
+
+    // Setup the game
+    function setup() {
+      gameCanvas = document.getElementById("gameCanvas");
+      gameCanvas.addEventListener("mousedown", startCalculatingThrowPower);
+      gameCanvas.addEventListener("mouseup", performThrow);
+      gameCanvas.addEventListener("mouseleave", stopCalculatingThrowPower);
+      gameCanvas.addEventListener("touchstart", startCalculatingThrowPower);
+      gameCanvas.addEventListener("touchend", performThrow);
+      gameCanvas.addEventListener("touchcancel", stopCalculatingThrowPower);
+      ctx = gameCanvas.getContext("2d");
+      player = {
+        x: 50,
+        y: gameCanvas.height - 50,
+        holdingBall: true
+      };
+      ball = {
+        x: player.x + 20,
+        y: player.y,
+        radius: 10,
+        dx: 0,
+        dy: 0
+      };
+      korf = {
+        x: gameCanvas.width / 2 - 25,
+        y: gameCanvas.height - 150,
+        width: 50,
+        height: 100
+      };
+      draw();
+    }
+
+    // Update game logic
+    function update() {
+      if (player.holdingBall) {
+        ball.x = player.x + 20;
+        ball.y = player.y;
+      } else {
+        ball.dy += gravity; // Apply gravity to ball's y-velocity
+        ball.x += ball.dx;
+        ball.y += ball.dy;
+
+        // Check collision with the korf's top edge
+        if (
+          ball.x + ball.radius >= korf.x &&
+          ball.y - ball.radius <= korf.y + korf.height &&
+          ball.y + ball.radius >= korf.y
+        ) {
+          score++;
+          if (score % 5 === 0) {
+            korfPosition += korfIncrement;
+          }
+          resetBall();
+        }
+
+        // Check if ball missed the korf
+        if (ball.x + ball.radius > gameCanvas.width || ball.y + ball.radius > gameCanvas.height) {
+          missCount++;
+          if (missCount >= maxMissCount) {
+            endGame();
+          } else {
+            resetBall();
+          }
+        }
+      }
+
+      if (korfPosition < 0 && missCount === 0 && score % 5 === 0) {
+        korfPosition += korfIncrement;
+      }
+    }
+
+    // Reset ball after a throw
+    function resetBall() {
+      player.holdingBall = true;
+      ball.dx = 0;
+      ball.dy = 0;
+      throwPower = 0;
+      throwAngle = 0;
+    }
+
+    // Stop the game and display the final score
+    function endGame() {
+      ctx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
+      ctx.font = "24px Arial";
+      ctx.fillText("Game Over. Final Score: " + score, gameCanvas.width / 2 - 150, gameCanvas.height / 2);
+    }
+
+    // Start calculating throw power
+    function startCalculatingThrowPower(event) {
+      if (event.touches) {
+        event.preventDefault();
+        event = event.touches[0];
+      }
+      if (player.holdingBall) {
+        isMousePressed = true;
+        gameCanvas.addEventListener("mousemove", trackMousePosition);
+        gameCanvas.addEventListener("touchmove", trackTouchPosition);
+        trackPosition(event);
+      }
+    }
+
+    // Stop calculating throw power and perform the throw
+    function performThrow(event) {
+      if (event.touches) {
+        event.preventDefault();
+        event = event.touches[0];
+      }
+      if (!player.holdingBall || !isMousePressed) {
+        return;
+      }
+      isMousePressed = false;
+      gameCanvas.removeEventListener("mousemove", trackMousePosition);
+      gameCanvas.removeEventListener("touchmove", trackTouchPosition);
+      const power = throwPower / 10;
+      ball.dx = Math.cos(throwAngle) * power;
+      ball.dy = Math.sin(throwAngle) * power;
+      player.holdingBall = false;
+    }
+
+    // Stop calculating throw power when the mouse leaves the canvas
+    function stopCalculatingThrowPower() {
+      isMousePressed = false;
+      gameCanvas.removeEventListener("mousemove", trackMousePosition);
+      gameCanvas.removeEventListener("touchmove", trackTouchPosition);
+    }
+
+    // Track mouse position
+    function trackMousePosition(event) {
+      if (!isMousePressed) {
+        return;
+      }
+      trackPosition(event);
+    }
+
+    // Track touch position
+    function trackTouchPosition(event) {
+      if (!isMousePressed || !event.touches) {
+        return;
+      }
+      trackPosition(event.touches[0]);
+    }
+
+    // Track mouse/touch position and update the power bar
+    function trackPosition(event) {
+      const rect = gameCanvas.getBoundingClientRect();
+      const mouseX = event.clientX - rect.left;
+      const mouseY = event.clientY - rect.top;
+
+      throwPower = Math.min(Math.sqrt(Math.pow(mouseY - player.y, 2) + Math.pow(mouseX - player.x, 2)), 300);
+      throwAngle = Math.atan2(mouseY - player.y, mouseX - player.x);
+
+      updatePowerBar();
+    }
+
+    // Update the power bar's width based on the current throw power
+    function updatePowerBar() {
+      const powerBar = document.getElementById("powerBar");
+      const powerBarWrapper = document.getElementById("powerBarWrapper");
+      const powerBarWidth = (throwPower / 300) * powerBarWrapper.clientWidth; // Normalize throwPower
+      powerBar.style.width = powerBarWidth + "px";
+    }
+
+    // Draw game objects on canvas
+    function draw() {
+      ctx.clearRect(0, 0, gameCanvas.width, gameCanvas.height);
+
+      // Draw background
+      ctx.fillStyle = "#F8F8F8";
+      ctx.fillRect(0, 0, gameCanvas.width, gameCanvas.height);
+
+      // Draw power bar
+      const powerBar = document.getElementById("powerBar");
+      const powerBarWrapper = document.getElementById("powerBarWrapper");
+      const powerBarWidth = (throwPower / 300) * powerBarWrapper.clientWidth; // Normalize throwPower
+      powerBar.style.width = powerBarWidth + "px";
+
+      // Draw player
+      ctx.fillStyle = "#000";
+      ctx.beginPath();
+      ctx.arc(player.x, player.y, 20, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Draw ball
+      ctx.fillStyle = "#FF0000";
+      ctx.beginPath();
+      ctx.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
+      ctx.fill();
+
+      // Draw korf
+      ctx.fillStyle = "#0000FF";
+      ctx.fillRect(gameCanvas.width - korf.x - korf.width + korfPosition, korf.y, korf.width, korf.height);
+
+      // Draw score and miss count
+      ctx.font = "16px Arial";
+      ctx.fillText("Score: " + score, 10, 20);
+      ctx.fillText("Misses: " + missCount + "/" + maxMissCount, 10, 40);
+
+      requestAnimationFrame(draw);
+      update();
+    }
+
+    setup();
+  </script>
+</body>
+</html>
