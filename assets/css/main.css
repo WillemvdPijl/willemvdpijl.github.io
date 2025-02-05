@@ -2635,6 +2635,10 @@ input, select, textarea {
 		filter: blur(2px);
 	}
 
+	.cinewillem-darken {
+		filter: brightness(0.9);
+	}
+
 	.image {
 		border: 0;
 		border-radius: 4px;
