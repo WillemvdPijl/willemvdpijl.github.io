@@ -27,7 +27,7 @@ var overviewerConfig = {
     ],
     "map": {
         "debug": false,
-        "cacheTag": "1740608056",
+        "cacheTag": "1740687182",
         "north_direction": "lower-left",
         "controls": {
             "pan": true,
