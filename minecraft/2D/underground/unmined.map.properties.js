@@ -4,11 +4,15 @@ var UnminedMapProperties = {
     maxZoom: 2,
     defaultZoom: 0,
     imageFormat: "jpeg",
-    minRegionX: -9,
-    minRegionZ: -20,
+    minRegionX: -16,
+    minRegionZ: -25,
     maxRegionX: 20,
     maxRegionZ: 19,
-    worldName: "BunchSurvival - Copy",
+    worldName: "BunchSurvival 02/03/2025 13:58:38 - Copy",
     background: "#202020",
-    markers: new Array()
+    markers: new Array(),
+    enableGrid: false,
+    showGrid: false,
+    centerX: 0,
+    centerZ: 0
 }
