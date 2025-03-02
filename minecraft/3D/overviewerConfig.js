@@ -27,7 +27,7 @@ var overviewerConfig = {
     ],
     "map": {
         "debug": false,
-        "cacheTag": "1740828871",
+        "cacheTag": "1740937199",
         "north_direction": "lower-left",
         "controls": {
             "pan": true,
@@ -67,7 +67,9 @@ var overviewerConfig = {
                 -1,
                 4
             ],
-            "north_direction": 1
+            "north_direction": 1,
+            "render_in_progress": true,
+            "forcerendertime": 1740937171
         },
         {
             "name": "west",
@@ -95,7 +97,9 @@ var overviewerConfig = {
                 -1,
                 4
             ],
-            "north_direction": 3
+            "north_direction": 3,
+            "render_in_progress": true,
+            "forcerendertime": 1740937183
         }
     ]
 };
