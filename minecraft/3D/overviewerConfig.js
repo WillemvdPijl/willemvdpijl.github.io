@@ -27,7 +27,7 @@ var overviewerConfig = {
     ],
     "map": {
         "debug": false,
-        "cacheTag": "1741382460",
+        "cacheTag": "1742207075",
         "north_direction": "lower-left",
         "controls": {
             "pan": true,
@@ -50,7 +50,7 @@ var overviewerConfig = {
             "base": "",
             "bgcolor": "#1a1a1a",
             "world": "survival",
-            "last_rendertime": 1740822056,
+            "last_rendertime": 1742201222,
             "imgextension": "jpg",
             "isOverlay": false,
             "poititle": "Markers",
@@ -67,9 +67,7 @@ var overviewerConfig = {
                 -1,
                 4
             ],
-            "north_direction": 1,
-            "render_in_progress": true,
-            "forcerendertime": 1741382427
+            "north_direction": 1
         },
         {
             "name": "west",
@@ -80,7 +78,7 @@ var overviewerConfig = {
             "base": "",
             "bgcolor": "#1a1a1a",
             "world": "survival",
-            "last_rendertime": 1740822056,
+            "last_rendertime": 1742201222,
             "imgextension": "jpg",
             "isOverlay": false,
             "poititle": "Markers",
@@ -97,9 +95,7 @@ var overviewerConfig = {
                 -1,
                 4
             ],
-            "north_direction": 3,
-            "render_in_progress": true,
-            "forcerendertime": 1741382440
+            "north_direction": 3
         }
     ]
 };
