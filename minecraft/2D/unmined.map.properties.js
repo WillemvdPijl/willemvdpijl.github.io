@@ -8,7 +8,7 @@ var UnminedMapProperties = {
     minRegionZ: -25,
     maxRegionX: 20,
     maxRegionZ: 19,
-    worldName: "BunchSurvival 07/03/2025 21:22:13 - Copy",
+    worldName: "BunchSurvival 17/03/2025 08:39:58 - Copy",
     background: "#202020",
     markers: new Array(),
     enableGrid: true,
