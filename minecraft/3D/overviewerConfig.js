@@ -69,33 +69,5 @@ var overviewerConfig = {
             ],
             "north_direction": 1
         },
-        {
-            "name": "west",
-            "zoomLevels": 10,
-            "defaultZoom": 1,
-            "maxZoom": 10,
-            "path": "West",
-            "base": "",
-            "bgcolor": "#1a1a1a",
-            "world": "survival",
-            "last_rendertime": 1742201222,
-            "imgextension": "jpg",
-            "isOverlay": false,
-            "poititle": "Markers",
-            "showlocationmarker": true,
-            "center": [
-                0,
-                -1,
-                4
-            ],
-            "lastrenderversion": 2,
-            "minZoom": 0,
-            "spawn": [
-                0,
-                -1,
-                4
-            ],
-            "north_direction": 3
-        }
     ]
 };
